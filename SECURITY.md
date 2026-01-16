@@ -13,10 +13,10 @@
 
 ### How to Report
 
-Send a detailed report to: **security@guardian-launcher.example.com** (replace with actual email)
+Send a detailed report to: **security@brittytino.com**
 
 Or use GitHub Security Advisories:
-https://github.com/yourusername/guardian-launcher/security/advisories/new
+https://github.com/brittytino/guardian-launcher/security/advisories/new
 
 ### What to Include
 
@@ -203,7 +203,7 @@ Currently, we do not have a formal bug bounty program. However:
 
 ## Contact
 
-- **Security Email**: security@guardian-launcher.example.com
+- **Security Email**: security@brittytino.com
 - **GitHub Security**: Use private security advisories
 - **PGP Key**: [If you set one up, link here]
 
@@ -212,7 +212,7 @@ Currently, we do not have a formal bug bounty program. However:
 None yet - this is the initial release.
 
 Future advisories will be listed here and published at:
-https://github.com/yourusername/guardian-launcher/security/advisories
+https://github.com/brittytino/guardian-launcher/security/advisories
 
 ## Security-First Development
 
@@ -231,7 +231,7 @@ For non-security questions, use:
 - GitHub Issues (non-security only)
 
 For security questions:
-- Email security@guardian-launcher.example.com
+- Email security@brittytino.com
 - Use private channels only
 
 ---

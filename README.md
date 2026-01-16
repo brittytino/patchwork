@@ -52,7 +52,7 @@ Guardian Launcher is a security-focused Android launcher designed to give parent
 
 ### For End Users
 
-1. Download the APK from [Releases](https://github.com/yourusername/guardian-launcher/releases)
+1. Download the APK from [Releases](https://github.com/brittytino/guardian-launcher/releases)
 2. Install on the child's device
 3. Grant required permissions (Usage Stats, Device Admin)
 4. Set as default launcher
@@ -63,7 +63,7 @@ Guardian Launcher is a security-focused Android launcher designed to give parent
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/guardian-launcher.git
+git clone https://github.com/brittytino/guardian-launcher.git
 cd guardian-launcher
 
 # Build the project
@@ -184,8 +184,8 @@ We chose Apache 2.0 to encourage adoption and contribution while protecting cont
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/guardian-launcher/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/guardian-launcher/discussions)
+- **Issues**: [GitHub Issues](https://github.com/brittytino/guardian-launcher/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/brittytino/guardian-launcher/discussions)
 - **Security**: See [SECURITY.md](SECURITY.md) for reporting vulnerabilities
 
 ## Roadmap

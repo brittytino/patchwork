@@ -24,7 +24,7 @@ Thank you for your interest in contributing to Guardian Launcher. This is a seri
 
 ### Reporting Bugs
 
-1. Check if the bug already exists in [Issues](https://github.com/yourusername/guardian-launcher/issues)
+1. Check if the bug already exists in [Issues](https://github.com/brittytino/guardian-launcher/issues)
 2. Create a new issue with:
    - Clear description of the bug
    - Steps to reproduce
@@ -34,7 +34,7 @@ Thank you for your interest in contributing to Guardian Launcher. This is a seri
 
 ### Suggesting Features
 
-1. Check [Discussions](https://github.com/yourusername/guardian-launcher/discussions) first
+1. Check [Discussions](https://github.com/brittytino/guardian-launcher/discussions) first
 2. Open a new discussion with:
    - Clear use case
    - Why it's needed
@@ -54,7 +54,7 @@ Thank you for your interest in contributing to Guardian Launcher. This is a seri
 
 ```bash
 # Fork and clone
-git clone https://github.com/YOUR_USERNAME/guardian-launcher.git
+git clone https://github.com/brittytino/guardian-launcher.git
 cd guardian-launcher
 
 # Create a branch
@@ -253,7 +253,7 @@ fun functionName(paramName: Type): ReturnType
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/yourusername/guardian-launcher/discussions)
+- Open a [Discussion](https://github.com/brittytino/guardian-launcher/discussions)
 - Comment on relevant issues
 - Be patient - we prioritize thoroughness over speed
 
