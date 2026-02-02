@@ -364,7 +364,7 @@ class StatusBarIconViewModel : ViewModel() {
     }
 
     fun getAdbCommand(): String {
-        return "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+        return "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
     }
 
     override fun onCleared() {

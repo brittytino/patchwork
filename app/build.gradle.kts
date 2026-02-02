@@ -14,11 +14,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.brittytino.essentials"
+    namespace = "com.brittytino.patchwork"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.brittytino.essentials"
+        applicationId = "com.brittytino.patchwork"
         minSdk = 26
         targetSdk = 36
         versionCode = 23

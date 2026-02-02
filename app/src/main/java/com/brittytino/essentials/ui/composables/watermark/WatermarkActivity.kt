@@ -21,7 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.brittytino.essentials.R
 import com.brittytino.essentials.data.repository.SettingsRepository
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import com.brittytino.essentials.viewmodels.WatermarkViewModel
 
 class WatermarkActivity : ComponentActivity() {
@@ -60,7 +60,7 @@ class WatermarkActivity : ComponentActivity() {
         setContent {
             val isPitchBlackThemeEnabled by settingsRepository.isPitchBlackThemeEnabled.collectAsState(initial = false)
             
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 Surface(color = MaterialTheme.colorScheme.surfaceContainer) {
                     val context = LocalContext.current
                     val viewModel: WatermarkViewModel = viewModel(

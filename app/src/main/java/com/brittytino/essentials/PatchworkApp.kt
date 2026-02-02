@@ -8,7 +8,7 @@ import android.os.Build
 import com.brittytino.essentials.services.ScreenOffReceiver
 import com.brittytino.essentials.utils.ShizukuUtils
 
-class EssentialsApp : Application() {
+class PatchworkApp : Application() {
     companion object {
         lateinit var context: Context
             private set

@@ -24,7 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.brittytino.essentials.R
 import com.brittytino.essentials.services.receivers.FlashlightActionReceiver
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import com.brittytino.essentials.utils.FlashlightUtil
 import com.brittytino.essentials.utils.HapticUtil
 
@@ -53,7 +53,7 @@ class FlashlightIntensityActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 FlashlightIntensityOverlay(onDismiss = { finish() })
             }
         }

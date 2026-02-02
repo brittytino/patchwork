@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import com.brittytino.essentials.ui.activities.AppFreezingActivity
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import com.brittytino.essentials.utils.FreezeManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -47,7 +47,7 @@ class ShortcutHandlerActivity : ComponentActivity() {
                     viewModel.check(context)
                 }
                 val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-                EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+                PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center

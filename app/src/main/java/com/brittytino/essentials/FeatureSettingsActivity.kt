@@ -46,7 +46,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.brittytino.essentials.ui.components.ReusableTopAppBar
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import com.brittytino.essentials.domain.HapticFeedbackType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.brittytino.essentials.domain.registry.PermissionRegistry
@@ -104,7 +104,7 @@ class FeatureSettingsActivity : FragmentActivity() {
                     viewModel.check(context)
                 }
                 val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-                EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+                PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                     LinkPickerScreen(
                         uri = "https://brittytino.com".toUri(),
                         onFinish = { finish() },
@@ -148,7 +148,7 @@ class FeatureSettingsActivity : FragmentActivity() {
             
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
             
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val view = LocalView.current
                 val prefs = context.getSharedPreferences("essentials_prefs", MODE_PRIVATE)
 
@@ -230,7 +230,7 @@ class FeatureSettingsActivity : FragmentActivity() {
                                 dependentFeatures = PermissionRegistry.getFeatures("WRITE_SECURE_SETTINGS"),
                                 actionLabel = R.string.perm_action_copy_adb,
                                 action = {
-                                    val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                                    val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                                     val clipboard = context.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
                                     val clip = ClipData.newPlainText("adb_command", adbCommand)
                                     clipboard.setPrimaryClip(clip)
@@ -313,7 +313,7 @@ class FeatureSettingsActivity : FragmentActivity() {
                                 dependentFeatures = PermissionRegistry.getFeatures("WRITE_SECURE_SETTINGS"),
                                 actionLabel = R.string.perm_action_copy_adb,
                                 action = {
-                                    val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                                    val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                                     val clipboard = context.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
                                     val clip = ClipData.newPlainText("adb_command", adbCommand)
                                     clipboard.setPrimaryClip(clip)
@@ -355,7 +355,7 @@ class FeatureSettingsActivity : FragmentActivity() {
                                 dependentFeatures = PermissionRegistry.getFeatures("WRITE_SECURE_SETTINGS"),
                                 actionLabel = R.string.perm_action_copy_adb,
                                 action = {
-                                    val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                                    val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                                     val clipboard = context.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
                                     val clip = ClipData.newPlainText("adb_command", adbCommand)
                                     clipboard.setPrimaryClip(clip)

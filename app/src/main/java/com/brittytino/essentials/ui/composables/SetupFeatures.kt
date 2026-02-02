@@ -1,4 +1,4 @@
-package com.brittytino.essentials.ui.composables
+package com.brittytino.patchwork.ui.composables
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -13,7 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.fragment.app.FragmentActivity
-import com.brittytino.essentials.utils.BiometricHelper
+import com.brittytino.patchwork.utils.BiometricHelper
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -43,16 +43,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import com.brittytino.essentials.domain.registry.FeatureRegistry
-import com.brittytino.essentials.FeatureSettingsActivity
-import com.brittytino.essentials.domain.registry.PermissionRegistry
-import com.brittytino.essentials.R
-import com.brittytino.essentials.ui.components.cards.FeatureCard
-import com.brittytino.essentials.ui.components.containers.RoundedCardContainer
-import com.brittytino.essentials.ui.components.FavoriteCarousel
-import com.brittytino.essentials.ui.components.sheets.PermissionItem
-import com.brittytino.essentials.ui.components.sheets.PermissionsBottomSheet
-import com.brittytino.essentials.viewmodels.MainViewModel
+import com.brittytino.patchwork.domain.registry.FeatureRegistry
+import com.brittytino.patchwork.FeatureSettingsActivity
+import com.brittytino.patchwork.domain.registry.PermissionRegistry
+import com.brittytino.patchwork.R
+import com.brittytino.patchwork.ui.components.cards.FeatureCard
+import com.brittytino.patchwork.ui.components.containers.RoundedCardContainer
+import com.brittytino.patchwork.ui.components.FavoriteCarousel
+import com.brittytino.patchwork.ui.components.sheets.PermissionItem
+import com.brittytino.patchwork.ui.components.sheets.PermissionsBottomSheet
+import com.brittytino.patchwork.viewmodels.MainViewModel
 import kotlinx.coroutines.delay
 
 private const val FEATURE_MAPS_POWER_SAVING = R.string.feat_maps_power_saving_title
@@ -96,7 +96,7 @@ fun SetupFeatures(
                         dependentFeatures = PermissionRegistry.getFeatures("ROOT"),
                         actionLabel = R.string.perm_action_grant,
                         action = { 
-                            viewModel.isRootPermissionGranted.value = com.brittytino.essentials.utils.RootUtils.isRootPermissionGranted()
+                            viewModel.isRootPermissionGranted.value = com.brittytino.patchwork.utils.RootUtils.isRootPermissionGranted()
                         },
                         isGranted = isRootPermissionGranted
                     )
@@ -203,7 +203,7 @@ fun SetupFeatures(
                                 dependentFeatures = PermissionRegistry.getFeatures("WRITE_SECURE_SETTINGS"),
                                 actionLabel = R.string.perm_action_copy_adb,
                                 action = {
-                                    val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                                    val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                                     val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                                     val clip = ClipData.newPlainText("adb_command", adbCommand)
                                     clipboard.setPrimaryClip(clip)
@@ -351,7 +351,7 @@ fun SetupFeatures(
                                 dependentFeatures = PermissionRegistry.getFeatures("WRITE_SECURE_SETTINGS"),
                                 actionLabel = R.string.perm_action_copy_adb,
                                 action = {
-                                    val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                                    val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                                     val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                                     val clip = ClipData.newPlainText("adb_command", adbCommand)
                                     clipboard.setPrimaryClip(clip)
@@ -426,7 +426,7 @@ fun SetupFeatures(
                     dependentFeatures = PermissionRegistry.getFeatures("WRITE_SECURE_SETTINGS"),
                     actionLabel = R.string.perm_action_copy_adb,
                     action = {
-                        val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                        val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                         val clip = ClipData.newPlainText("adb_command", adbCommand)
                         clipboard.setPrimaryClip(clip)
@@ -548,7 +548,7 @@ fun SetupFeatures(
                     dependentFeatures = PermissionRegistry.getFeatures("WRITE_SECURE_SETTINGS"),
                     actionLabel = R.string.perm_action_copy_adb,
                     action = {
-                        val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                        val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                         val clip = ClipData.newPlainText("adb_command", adbCommand)
                         clipboard.setPrimaryClip(clip)

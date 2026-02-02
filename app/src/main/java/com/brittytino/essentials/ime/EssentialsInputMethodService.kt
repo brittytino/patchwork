@@ -22,7 +22,7 @@ import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.brittytino.essentials.ui.ime.KeyboardInputView
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import com.brittytino.essentials.data.repository.SettingsRepository
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -236,7 +236,7 @@ class EssentialsInputMethodService : InputMethodService(), LifecycleOwner, ViewM
                 val useDarkTheme = isAlwaysDark || androidx.compose.foundation.isSystemInDarkTheme()
                 val suggestions by suggestionEngine.suggestions.collectAsState()
 
-                EssentialsTheme(
+                PatchworkTheme(
                     darkTheme = useDarkTheme,
                     pitchBlackTheme = isPitchBlack
                 ) {

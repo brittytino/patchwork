@@ -51,7 +51,7 @@ class LocationAlarmActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            com.brittytino.essentials.ui.theme.EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            com.brittytino.essentials.ui.theme.PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 LocationAlarmScreen(onFinish = {
                     stopAlarmAndFinish()
                 })

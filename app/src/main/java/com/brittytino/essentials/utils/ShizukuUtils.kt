@@ -71,7 +71,7 @@ object ShizukuUtils {
         if (!hasPermission() || !isBinderAlive) return false
 
         return try {
-            runCommand("pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS")
+            runCommand("pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS")
             true
         } catch (@Suppress("UNUSED_PARAMETER") e: Exception) {
             false

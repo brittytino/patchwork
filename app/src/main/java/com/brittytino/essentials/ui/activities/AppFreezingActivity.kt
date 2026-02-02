@@ -45,7 +45,7 @@ import androidx.core.view.WindowCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.brittytino.essentials.domain.model.NotificationApp
 import com.brittytino.essentials.ui.components.ReusableTopAppBar
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import com.brittytino.essentials.utils.FreezeManager
 import com.brittytino.essentials.utils.HapticUtil
 import com.brittytino.essentials.viewmodels.MainViewModel
@@ -78,7 +78,7 @@ class AppFreezingActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val context = LocalContext.current
                 val view = LocalView.current
                 val pickedApps by viewModel.freezePickedApps

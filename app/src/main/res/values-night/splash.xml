@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Essentials.Splash" parent="Theme.SplashScreen">
+    <style name="Theme.Patchwork.Splash" parent="Theme.SplashScreen">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -8,6 +8,6 @@
         <item name="windowSplashScreenBackground">@color/app_window_background</item>
         <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="windowSplashScreenAnimationDuration">2000</item>
-        <item name="postSplashScreenTheme">@style/Theme.Essentials</item>
+        <item name="postSplashScreenTheme">@style/Theme.Patchwork</item>
     </style>
 </resources>

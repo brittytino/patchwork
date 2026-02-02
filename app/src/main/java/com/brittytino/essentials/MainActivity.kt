@@ -40,7 +40,7 @@ import com.brittytino.essentials.ui.components.ReusableTopAppBar
 import com.brittytino.essentials.ui.components.DIYFloatingToolbar
 import com.brittytino.essentials.ui.composables.SetupFeatures
 import com.brittytino.essentials.ui.composables.DIYScreen
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import com.brittytino.essentials.utils.HapticUtil
 import com.brittytino.essentials.viewmodels.MainViewModel
 import com.brittytino.essentials.viewmodels.LocationReachedViewModel
@@ -152,7 +152,7 @@ class MainActivity : FragmentActivity() {
         viewModel.check(this)
         setContent {
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val context = LocalContext.current
                 val view = LocalView.current
                 val versionName = try {

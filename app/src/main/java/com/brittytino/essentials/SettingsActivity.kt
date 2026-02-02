@@ -38,7 +38,7 @@ import com.brittytino.essentials.ui.components.pickers.DefaultTabPicker
 import com.brittytino.essentials.ui.components.pickers.SegmentedPicker
 import com.brittytino.essentials.ui.components.ReusableTopAppBar
 import com.brittytino.essentials.ui.components.containers.RoundedCardContainer
-import com.brittytino.essentials.ui.theme.EssentialsTheme
+import com.brittytino.essentials.ui.theme.PatchworkTheme
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -101,7 +101,7 @@ class SettingsActivity : ComponentActivity() {
         Shizuku.addRequestPermissionResultListener(shizukuPermissionResultListener)
         setContent {
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val context = LocalContext.current
                 val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
 
@@ -353,7 +353,7 @@ fun SettingsContent(viewModel: MainViewModel, modifier: Modifier = Modifier) {
                     actionLabel = if (isWriteSecureSettingsEnabled) "Granted" else "Copy ADB Command",
                     isGranted = isWriteSecureSettingsEnabled,
                     onActionClick = {
-                        val adbCommand = "adb shell pm grant com.brittytino.essentials android.permission.WRITE_SECURE_SETTINGS"
+                        val adbCommand = "adb shell pm grant com.brittytino.patchwork android.permission.WRITE_SECURE_SETTINGS"
                         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                         val clip = ClipData.newPlainText("adb_command", adbCommand)
                         clipboard.setPrimaryClip(clip)

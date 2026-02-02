@@ -1,21 +1,21 @@
-# Essentials
+# Patchwork
 
 Essential tools, mods and workarounds for Pixels and other Androids
 
+**Developer**: Tino Britty J  
+**GitHub**: [github.com/brittytino](https://github.com/brittytino)
+
 <p align="center">
-  <a href="https://github.com/brittytino/essentials/releases/latest"><img alt="GitHub Downloads (specific asset, all releases)" src="https://img.shields.io/github/downloads/brittytino/essentials/app-release.apk?displayAssetName=false&style=for-the-badge&logo=android&logoColor=%23fff&labelColor=%2348C&color=%2348C">
+  <a href="https://github.com/brittytino/patchwork/releases/latest"><img alt="GitHub Downloads (specific asset, all releases)" src="https://img.shields.io/github/downloads/brittytino/patchwork/app-release.apk?displayAssetName=false&style=for-the-badge&logo=android&logoColor=%23fff&labelColor=%2348C&color=%2348C">
 </a>
-  <a href="https://github.com/brittytino/essentials/issues/new?template=bug_report.md"><img alt="GitHub Issues or Pull Requests by label" src="https://img.shields.io/github/issues/brittytino/essentials/bug?style=for-the-badge&logo=openbugbounty&logoColor=%23fff&label=bug%3F&labelColor=%232a6&color=%232a6">
+  <a href="https://github.com/brittytino/patchwork/issues/new?template=bug_report.md"><img alt="GitHub Issues or Pull Requests by label" src="https://img.shields.io/github/issues/brittytino/patchwork/bug?style=for-the-badge&logo=openbugbounty&logoColor=%23fff&label=bug%3F&labelColor=%232a6&color=%232a6">
 </a>
-  <a href="https://github.com/brittytino/essentials/issues/new?template=feature_request.md"><img alt="GitHub Issues or Pull Requests by label" src="https://img.shields.io/github/issues/brittytino/essentials/enhancement?style=for-the-badge&logo=apachespark&logoColor=%23fff&label=Feature%20request&labelColor=%23a26&color=%23a26">
+  <a href="https://github.com/brittytino/patchwork/issues/new?template=feature_request.md"><img alt="GitHub Issues or Pull Requests by label" src="https://img.shields.io/github/issues/brittytino/patchwork/enhancement?style=for-the-badge&logo=apachespark&logoColor=%23fff&label=Feature%20request&labelColor=%23a26&color=%23a26">
 </a>
 </a>
   <a href="https://brittytino.com"><img src="https://img.shields.io/badge/My%20website-orange?style=for-the-badge&logo=googlechrome&logoColor=%23000&labelColor=%233AFFB8&color=%233AFFB8" alt="My website" /></a>
   <a href="https://t.me/tidwib"><img src="https://img.shields.io/badge/Community-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Community" /></a>
-  <a href="https://crowdin.com/project/essentials-android"><img alt="Crowdin" src="https://badges.crowdin.net/essentials-android/localized.svg?style=for-the-badge">
 </p>
-
-> ### Essentials got featured by HowToMen! 🎉 <br><br> [![Essentials got featured by HowToMen!](https://github.com/user-attachments/assets/9dffa436-034e-4d59-811e-f5979b000414)](https://youtu.be/7favc9MDedQ?si=dduc7452R5Yxj7Aa&t=79)
 
 ## Navigation
 
@@ -103,9 +103,9 @@ A collection of useful tiles to toggle system settings:
 
 # Shell Providers (Shizuku & Root)
 
-- Essentials supports both **Shizuku** and **Root** as shell providers for executing advanced system-level commands.
+- Patchwork supports both **Shizuku** and **Root** as shell providers for executing advanced system-level commands.
 - **Shizuku**: Make sure to get the latest version of Shizuku preferably from a fork such as [yangFenTuoZi/Shizuku](https://github.com/yangFenTuoZi/Shizuku) or other not from the Google Play as it is no longer well supported especially with Android 16 QPR1 up.
-- **Root**: If your device is rooted, Essentials can bypass Shizuku and use root privileges directly for features like Button Remap and App Freezing.
+- **Root**: If your device is rooted, Patchwork can bypass Shizuku and use root privileges directly for features like Button Remap and App Freezing.
 
 # How to grant accessibility permissions
 
@@ -113,11 +113,11 @@ A collection of useful tiles to toggle system settings:
 
 # Localization
 
-Help us bring Essentials to more people around the world! If you're fluent in another language, you can contribute by translating the app on Crowdin.
+Help us bring Patchwork to more people around the world! If you're fluent in another language, you can contribute by translating the app on Crowdin.
 
-[![Crowdin](https://badges.crowdin.net/essentials-android/localized.svg)](https://crowdin.com/project/essentials-android)
+[![Crowdin](https://badges.crowdin.net/patchwork-android/localized.svg)](https://crowdin.com/project/patchwork-android)
 
-[Support translation on Crowdin](https://crowdin.com/project/essentials-android)
+[Support translation on Crowdin](https://crowdin.com/project/patchwork-android)
 
 # Contributing
 
@@ -127,11 +127,11 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 
 # Stars <3
 
-<a href="https://star-history.com/#brittytino/essentials&Date">
+<a href="https://star-history.com/#brittytino/patchwork&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=brittytino/essentials&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=brittytino/essentials&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=brittytino/essentials&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=brittytino/patchwork&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=brittytino/patchwork&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=brittytino/patchwork&type=Date" />
  </picture>
 </a>
 

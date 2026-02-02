@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Essentials" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Theme.Patchwork" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="Theme.Essentials.Translucent" parent="Theme.Essentials">
+    <style name="Theme.Patchwork.Translucent" parent="Theme.Patchwork">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@null</item>
@@ -15,7 +15,7 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="Theme.Essentials.FullScreenAlarm" parent="Theme.Essentials">
+    <style name="Theme.Patchwork.FullScreenAlarm" parent="Theme.Patchwork">
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowNoTitle">true</item>

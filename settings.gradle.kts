@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Essentials"
+rootProject.name = "Patchwork"
 include(":app")
  

@@ -12,7 +12,7 @@ class EssentialsConditionProvider : ConditionProviderService() {
 
     companion object {
         private const val TAG = "EssentialsCPS"
-        val CONDITION_URI: Uri = Uri.parse("condition://com.brittytino.essentials/focus")
+        val CONDITION_URI: Uri = Uri.parse("condition://com.brittytino.patchwork/focus")
         
         private var instance: EssentialsConditionProvider? = null
 
