@@ -1,0 +1,128 @@
+package com.brittytino.essentials.services.tiles
+
+import android.app.NotificationManager
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.graphics.drawable.Icon
+import android.media.AudioManager
+import android.os.Build
+import android.service.quicksettings.Tile
+import android.service.quicksettings.TileService
+import com.brittytino.essentials.R
+import com.brittytino.essentials.services.handlers.SoundModeHandler
+import com.brittytino.essentials.utils.HapticUtil
+
+class SoundModeTileService : TileService() {
+
+    private var latestAudioStateUpdate: Int? = null
+
+    private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            if (intent.action == AudioManager.RINGER_MODE_CHANGED_ACTION) {
+                updateSoundTile()
+            }
+        }
+    }
+
+    private fun updateSoundTile() {
+        val audioManager = getSystemService(AUDIO_SERVICE) as AudioManager
+
+        if (latestAudioStateUpdate == audioManager.ringerMode) {
+            latestAudioStateUpdate = null
+            return
+        }
+
+        if (qsTile == null) {
+            return
+        }
+
+        // Check if permission is granted
+        val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        val hasPermission = notificationManager.isNotificationPolicyAccessGranted
+
+        if (!hasPermission) {
+            qsTile.state = Tile.STATE_UNAVAILABLE
+            qsTile.label = "Sound"
+            qsTile.updateTile()
+            return
+        }
+
+        when (audioManager.ringerMode) {
+            AudioManager.RINGER_MODE_NORMAL -> {
+                qsTile.label = "Sound"
+                qsTile.icon = Icon.createWithResource(this, R.drawable.rounded_volume_up_24)
+                qsTile.state = Tile.STATE_INACTIVE
+            }
+
+            AudioManager.RINGER_MODE_VIBRATE -> {
+                qsTile.label = "Vibrate"
+                qsTile.icon = Icon.createWithResource(this, R.drawable.rounded_mobile_vibrate_24)
+                qsTile.state = Tile.STATE_ACTIVE
+            }
+
+            AudioManager.RINGER_MODE_SILENT -> {
+                qsTile.label = "Silent"
+                qsTile.icon = Icon.createWithResource(this, R.drawable.rounded_volume_off_24)
+                qsTile.state = Tile.STATE_ACTIVE
+            }
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            qsTile.subtitle = "Mode"
+        }
+
+        qsTile.updateTile()
+    }
+
+    override fun onClick() {
+        super.onClick()
+
+        val nextRingerMode = SoundModeHandler(this).cycleNextMode()
+        if (nextRingerMode != null) {
+            latestAudioStateUpdate = nextRingerMode
+            updateSoundTile()
+        }
+    }
+
+    override fun onStartListening() {
+        super.onStartListening()
+        updateSoundTile()
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+
+        this.registerReceiver(
+            broadcastReceiver,
+            IntentFilter(AudioManager.RINGER_MODE_CHANGED_ACTION)
+        )
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        try {
+            this.unregisterReceiver(broadcastReceiver)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    override fun onTileAdded() {
+        super.onTileAdded()
+        updateSoundTile()
+    }
+
+    override fun onTileRemoved() {
+        super.onTileRemoved()
+
+        if (qsTile == null) {
+            return
+        }
+
+        qsTile.state = Tile.STATE_UNAVAILABLE
+        qsTile.updateTile()
+    }
+}
