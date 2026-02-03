@@ -175,7 +175,7 @@ fun InstructionsBottomSheet(
                 ) {
                     Button(
                         onClick = {
-                            val websiteUrl = "https://github.com/brittytino/essentials"
+                            val websiteUrl = "https://github.com/brittytino/patchwork"
                             val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
                             context.startActivity(intent)
                         },

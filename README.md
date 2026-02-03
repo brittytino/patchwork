@@ -59,64 +59,64 @@ Patchwork packs a powerful punch with features organized into intuitive categori
 
 ## 🛠️ Productivity & Tools
 
-### **Maps Power Saving Mode** 🗺️
-Exclusive Pixel 10 feature, now on any device! Automatically triggers Google Maps power-saving mode during navigation, optimizing battery life when your screen turns off. Works seamlessly with AOD displays.
-- *Requires: Shizuku or Root*
-
-### **Travel Alarm (Are We There Yet?)** 📍
-Never miss your stop again. Set any destination and get intelligent proximity alerts.
-- Real-time distance tracking in status bar
-- Lock screen Live Activity support
-- Background location monitoring
-- Smart radius detection
-
-### **DIY Automation** 🤖
-Create powerful custom automations without coding:
-- **Triggers**: App launch, time-based, screen state, battery level, charging status, network changes
-- **Actions**: Launch apps, toggle settings, control flashlight, play sounds, send notifications
-- **Conditions**: Combine multiple triggers with AND/OR logic
-- Full automation management with enable/disable controls
-
 ### **Screen Off Widget** 📱
 Invisible home screen widget that locks your device instantly—no more reaching for the power button.
 - Customizable haptic feedback
 - Multiple widget sizes
 - Instant lock with accessibility permission
+- *Requires: Accessibility Service*
 
 ### **Caffeinate** ☕
 Keep your screen awake indefinitely or for a specific duration.
 - Quick Settings tile for instant access
-- Duration presets (5min, 15min, 30min, 1hr, ∞)
+- Duration presets available
 - Automatic timeout management
-- Battery-conscious with display dimming
+- Battery-conscious with proper handling
+- *Requires: POST_NOTIFICATIONS permission*
+
+### **Maps Power Saving Mode** 🗺️
+Automatically triggers Google Maps power-saving mode, optimizing battery life when your screen turns off.
+- Real-time power-saving detection
+- Works with notification listener
+- *Requires: Shizuku or Root + Notification Listener*
+
+### **Location Reached (Travel Alarm)** 📍
+Never miss your stop again. Set any destination and get intelligent proximity alerts.
+- Real-time distance tracking
+- Background location monitoring
+- Lock screen notifications
+- *Requires: Location + Background Location permissions*
+
+### **DIY Automation** 🤖
+Create powerful custom automations without coding:
+- **Triggers**: Screen state changes, charging status, device unlock
+- **Actions**: Launch apps, toggle settings, control flashlight, play sounds, send notifications
+- **Conditions**: Combine multiple triggers with logic
+- Full automation management with enable/disable controls
+- App-based triggering support
 
 ### **Button Remap** 🎮
 Transform your hardware buttons into powerful shortcuts:
 - Long-press volume buttons (even when screen is off!)
-- Configurable actions: Flashlight, Camera, Media controls, Custom shortcuts
+- Configurable actions: Flashlight, and custom shortcuts
 - Screen-on and screen-off profiles
 - Works with Accessibility service or Shizuku/Root for enhanced functionality
-
-### **Link Actions** 🔗
-Take control of how links open on your device:
-- Intercept and redirect links to specific apps
-- Create custom URL handlers
-- Choose default apps for different link types
-- Bypass app restrictions
+- Customizable haptic feedback
+- *Requires: Accessibility Service + Shizuku/Root*
 
 ### **App Freezing** ❄️
 Pause rarely-used apps to save battery and free up system resources:
 - One-tap freeze/unfreeze
-- Auto-freeze on screen off
+- Auto-freeze on screen lock
 - Frozen app shortcuts for quick access
-- Batch operations
+- Batch freeze operations
 - System app warnings to prevent issues
 - *Requires: Shizuku or Root*
 
 ### **Watermark** 📷
-Add custom watermarks to your photos with full EXIF data preservation:
-- Text watermarks with customizable fonts and colors
-- EXIF data overlay (date, time, location, camera settings)
+Add custom watermarks to your photos:
+- Text watermarks with customizable options
+- EXIF data preservation
 - Position and transparency controls
 - Batch processing support
 
@@ -152,9 +152,9 @@ Beautiful, customizable ambient lighting effects for notifications:
 - **Styles**: Glow, Spinner, Stroke, Pulse
 - Per-app color customization
 - Flashlight pulse option
-- Ambient display integration (when OEM supports overlays)
-- Edge lighting effects
+- Works with notification system
 - Screen-off notifications
+- *Requires: Display Over Other Apps + Accessibility + Notification Listener*
 
 ### **Dynamic Night Light** 🌙
 Automatically enable/disable Night Light based on the active app:
@@ -162,10 +162,11 @@ Automatically enable/disable Night Light based on the active app:
 - Smooth transitions
 - Automatic scheduling
 - Great for reading apps, social media, or any late-night usage
+- *Requires: Accessibility Service + WRITE_SECURE_SETTINGS*
 
 ## ⚡ Quick Settings Tiles
 
-One-tap access to powerful system toggles:
+One-tap access to powerful system toggles. Available tiles include:
 
 ### System Controls
 - **UI Blur**: Toggle system-wide blur effects
@@ -175,16 +176,17 @@ One-tap access to powerful system toggles:
 - **Mono Audio**: Switch to mono audio output
 - **NFC**: Quick NFC toggle
 - **Stay Awake**: Developer option for keeping screen on while charging
+- **USB Debugging**: Quick toggle for USB Debugging
+- **Private DNS**: Manage Private DNS settings
 
 ### Enhanced Controls
-- **Adaptive Brightness**: Especially useful for Pixel devices
 - **Caffeinate**: Keep screen awake with duration control
 - **Sound Mode**: Cycle through Ring/Vibrate/Silent
 - **Bubbles**: Toggle notification bubbles
+- **Flashlight**: Quick flashlight toggle
+- **Flashlight Pulse**: Pulse flashlight for notifications
 
 ### Patchwork Features
-- **Flashlight**: Enhanced flashlight with brightness control
-- **Flashlight Pulse**: Pulse flashlight for notifications
 - **Notification Lighting**: Toggle lighting service
 - **Locked Security**: Toggle screen lock security
 - **Dynamic Night Light**: Per-app Night Light control
@@ -192,38 +194,35 @@ One-tap access to powerful system toggles:
 - **App Lock**: Toggle app lock protection
 - **Maps Power Saving**: Instant access to power-saving mode
 
+*Requires: WRITE_SECURE_SETTINGS for most tiles*
+
 ## 🎹 Bonus Features
 
-### **Patchwork Keyboard** ⌨️
-A fully functional custom keyboard (that nobody asked for, but here it is!):
-- Material 3 design
-- Customizable layout and colors
+### **System Keyboard** ⌨️
+A fully functional Material 3 custom keyboard:
+- Material 3 design with modern aesthetics
+- Customizable keyboard height and padding
+- Haptic feedback support
+- Multiple language layout support
 - Clipboard integration
-- Emoji support
-- Multiple language layouts
 
 ### **Snooze System Notifications** 🔕
 Automatically snooze persistent system notifications that can't be dismissed:
 - Configurable snooze duration
-- Whitelist/blacklist apps
-- Battery optimization warnings
-- Debugging notifications
+- Smart notification handling
+- Battery optimization integration
+- *Requires: Notification Listener*
 
 ### **Batteries Monitor** 🔋
 Track all your device battery levels in one place:
 - Phone battery with detailed stats
-- Connected Bluetooth devices
+- Connected Bluetooth devices battery levels
 - Battery percentage indicators
-- Historical tracking
+- Real-time device monitoring
+- *Requires: Bluetooth Connect + Bluetooth Scan permissions*
 
-### **Flashlight Enhancements** 🔦
-Advanced flashlight control beyond the basics:
-- Smooth fade-in/fade-out transitions
-- Volume key intensity adjustment (on supported devices)
-- Global brightness controls
-- Live Activity support
-- SOS mode
-- *Note: Brightness control requires Android 13+ and HAL 3.8+ (Pixel 6+, Samsung S23+)*
+### **Sound Mode Tile** 🔊
+Quick access to sound profile switching without entering settings.
 
 # Requirements
 
@@ -238,15 +237,15 @@ Advanced flashlight control beyond the basics:
 
 ### Permissions
 Patchwork requires various permissions depending on which features you use:
-- **Accessibility Service**: Required for Button Remap, App Lock, Screen Locked Security, Dynamic Night Light
-- **Notification Listener**: Required for Notification Lighting, Snooze Notifications
+- **Accessibility Service**: Required for Screen Off Widget, Button Remap, App Lock, Screen Locked Security, Dynamic Night Light, Notification Lighting
+- **Notification Listener**: Required for Notification Lighting, Maps Power Saving, Snooze Notifications
 - **Display Over Other Apps**: Required for overlays and lighting effects
-- **Location**: Required for Travel Alarm
-- **Background Location**: Required for Travel Alarm lock screen updates
+- **Location**: Required for Location Reached (Travel Alarm)
+- **Background Location**: Required for Location Reached background updates
 - **Bluetooth**: Required for Batteries monitor
-- **Camera**: Required for Flashlight features
-- **System Alert Window**: Required for certain overlays
-- **WRITE_SECURE_SETTINGS**: Required for Status Bar Icons, Quick Settings Tiles (granted via Shizuku or ADB)
+- **POST_NOTIFICATIONS**: Required for Caffeinate
+- **WRITE_SECURE_SETTINGS**: Required for Status Bar Icons, Quick Settings Tiles, Dynamic Night Light (granted via Shizuku or ADB)
+- **DEVICE_ADMIN**: Required for Screen Locked Security
 
 **All permissions are optional** - grant only what you need for the features you want to use.
 
@@ -261,11 +260,76 @@ Shizuku provides a safe way to grant elevated permissions without rooting your d
 1. Download Shizuku from a maintained fork:
    - **Recommended**: [yangFenTuoZi/Shizuku](https://github.com/yangFenTuoZi/Shizuku)
    - ⚠️ **Avoid**: Google Play Store version (no longer well-maintained, especially for Android 16+)
-🌍
 
-Patchwork is currently available in **30+ languages**, all thanks to our amazing community translators. If you're fluent in another language or want to improve existing translations, we'd love your contribution!
+## Root Access
+
+If your device is rooted, Patchwork can use root privileges directly.
+
+### Advantages:
+- No need for Shizuku
+- Persistent access across reboots
+- Slightly faster execution for some features
+
+### Setup:
+1. Ensure your device is rooted (Magisk recommended)
+2. Grant Patchwork root permission when prompted
+3. Root access will be used automatically for compatible features
+
+## Without Shizuku or Root
+
+Most Patchwork features work perfectly fine without elevated permissions! You'll still have access to:
+- Quick Settings Tiles (basic)
+- Visual customizations (Status Bar, Notification Lighting, Dynamic Night Light with limitations)
+- Notification features (Snooze Notifications)
+- Location Reached (Travel Alarm)
+- Screen Off Widget
+- Button Remap (limited functionality)
+- App Lock
+- Watermark
+- System Keyboard
+- Batteries Monitor
+- And much more!
+
+Only features specifically marked "Requires: Shizuku or Root" (Maps Power Saving, App Freezing) need elevated access.
+
+**Note**: Some OEM-specific features may not work on all devices due to manufacturer customizations. Full feature set is available on Pixel and Samsung devices with the latest Android versions.
+
+# Screenshots
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a6a574ac-a1cb-44d5-b8c7-4fbca08647f1" width="19%" />
+  <img src="https://github.com/user-attachments/assets/e2b20eff-a232-420c-be90-b1308363f4f7" width="19%" />
+  <img src="https://github.com/user-attachments/assets/7fb98791-e4b4-43f1-98a8-4ab6aeb1d0f0" width="19%" />
+  <img src="https://github.com/user-attachments/assets/f126681d-ba53-4e45-911c-c9cb69350848" width="19%" />
+  <img src="https://github.com/user-attachments/assets/fc1593ec-ebf4-485a-bef4-7dd8ae6edb2a" width="19%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/36dfaed1-89b5-4998-987b-40d5203598a7" width="19%" />
+  <img src="https://github.com/user-attachments/assets/22e9deea-6fb8-43bc-9923-f711f5447c70" width="19%" />
+  <img src="https://github.com/user-attachments/assets/d0eb5302-9432-4618-896b-7d9e5b7cf9cd" width="19%" />
+  <img src="https://github.com/user-attachments/assets/50d762a5-5bc6-46e7-a9ce-9ccfc207957f" width="19%" />
+  <img src="https://github.com/user-attachments/assets/d77c91c0-a1b3-45e4-9123-eee0f09a558f" width="19%" />
+</p>
+
+# Shell Providers (Shizuku & Root)
+
+- Patchwork supports both **Shizuku** and **Root** as shell providers for executing advanced system-level commands.
+- **Shizuku**: Make sure to get the latest version of Shizuku preferably from a fork such as [yangFenTuoZi/Shizuku](https://github.com/yangFenTuoZi/Shizuku) or other not from the Google Play as it is no longer well supported especially with Android 16 QPR1 up.
+- **Root**: If your device is rooted, Patchwork can bypass Shizuku and use root privileges directly for features like Button Remap and App Freezing.
+
+# How to grant accessibility permissions
+
+<img width="1280" height="696" alt="image" src="https://github.com/user-attachments/assets/685115e7-4caa-4add-9196-d2e1e2c126a6" />
+
+# Localization
+
+Help us bring Patchwork to more people around the world! If you're fluent in another language, you can contribute by translating the app on Crowdin.
 
 [![Crowdin](https://badges.crowdin.net/patchwork-android/localized.svg)](https://crowdin.com/project/patchwork-android)
+
+[Support translation on Crowdin](https://crowdin.com/project/patchwork-android)
+
+Patchwork is currently available in **30+ languages**, all thanks to our amazing community translators. If you're fluent in another language or want to improve existing translations, we'd love your contribution!
 
 ### How to Contribute:
 1. Visit our [Crowdin project page](https://crowdin.com/project/patchwork-android)
@@ -286,12 +350,6 @@ Whether you're:
 - 📝 Improving documentation
 - 🌍 Translating to new languages
 - 🎨 Enhancing UI/UX
-- <sub>Built with ❤️ and Kotlin by <a href="https://github.com/brittytino">Tino Britty J</a></sub><br>
-  <sub>Last updated: 2026-02-02</sub>
-</p>
-
-<p align="center">
-  <sub>⚠️ Disclaimer: This app uses advanced system APIs. While designed for safety, some features are experimental. Use responsibly and at your own risk.</sub>
 
 Your help is greatly appreciated!
 
@@ -346,9 +404,6 @@ If you find Patchwork useful, consider:
 - ☕ **Supporting development** (links on website)
 
 Every bit of support helps keep the project alive and growing!
-- App Freezing
-- WRITE_SECURE_SETTINGS permission
-- System settings modifications
 
 ## Root Access
 
@@ -367,16 +422,21 @@ If your device is rooted, Patchwork can use root privileges directly.
 ## Without Shizuku or Root
 
 Most Patchwork features work perfectly fine without elevated permissions! You'll still have access to:
-- Quick Settings Tiles
-- Visual customizations
-- Notification features
-- Travel Alarm
+- Quick Settings Tiles (basic)
+- Visual customizations (Status Bar, Notification Lighting, Dynamic Night Light with limitations)
+- Notification features (Snooze Notifications)
+- Location Reached (Travel Alarm)
 - Screen Off Widget
-- Link Actions
+- Button Remap (limited functionality)
+- App Lock
+- Watermark
+- System Keyboard
+- Batteries Monitor
 - And much more!
 
-Only features specifically marked "Requires: Shizuku or Root" need elevated access
-- **Note**: Some OEM-specific features may not work on all devices due to manufacturer customizations
+Only features specifically marked "Requires: Shizuku or Root" (Maps Power Saving, App Freezing) need elevated access.
+
+**Note**: Some OEM-specific features may not work on all devices due to manufacturer customizations. Full feature set is available on Pixel and Samsung devices with the latest Android versions.
 
 # Screenshots
 
@@ -413,6 +473,17 @@ Help us bring Patchwork to more people around the world! If you're fluent in ano
 
 [Support translation on Crowdin](https://crowdin.com/project/patchwork-android)
 
+Patchwork is currently available in **30+ languages**, all thanks to our amazing community translators. If you're fluent in another language or want to improve existing translations, we'd love your contribution!
+
+### How to Contribute:
+1. Visit our [Crowdin project page](https://crowdin.com/project/patchwork-android)
+2. Select your language (or request a new one)
+3. Start translating!
+
+No technical knowledge required—just language skills and a few minutes of your time. Every translation helps make Patchwork accessible to more users worldwide.
+
+**Current Languages**: English, Spanish, French, German, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, Hindi, and many more!
+
 # Contributing
 
 We welcome contributions from the community! Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated.
@@ -432,5 +503,5 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 ---
 
 <p align="center">
-  Last updated: 2026-01-15
+  Last updated: 2026-02-03
 </p>

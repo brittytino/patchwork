@@ -8,7 +8,7 @@ Thank you for your interest in contributing to Essentials! This guide will help 
 2. **JDK**: Ensure you have JDK 17 or higher installed.
 3. **Clone the project**:
    ```bash
-   git clone https://github.com/brittytino/essentials.git
+   git clone https://github.com/brittytino/patchwork.git
    ```
 4. **Open in Android Studio**: Open the project and wait for Gradle to sync.
 5. **Shizuku**: Many features require [Shizuku](https://shizuku.rikka.app/). Install it on your device for testing.
@@ -51,7 +51,7 @@ object : Feature(
 
 ### 2. Create the Settings UI
 
-Create a new composable in `app/src/main/java/com/brittytino/essentials/ui/composables/configs/`.
+Create a new composable in `app/src/main/java/com/brittytino/patchwork/ui/composables/configs/`.
 
 - Use `RoundedCardContainer` for grouped items.
 - Use `IconToggleItem` or `SimpleToggleItem` for toggles.

@@ -219,7 +219,7 @@ fun BugReportBottomSheet(
                 Button(
                     onClick = {
                         val encodedBody = Uri.encode(contentToShare)
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/brittytino/essentials/issues/new?body=$encodedBody"))
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/brittytino/patchwork/issues/new?body=$encodedBody"))
                         context.startActivity(intent)
                     },
                     modifier = Modifier.fillMaxWidth()

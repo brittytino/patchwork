@@ -12,9 +12,9 @@ class UpdateRepository {
     suspend fun checkForUpdates(isPreReleaseCheckEnabled: Boolean, currentVersion: String): UpdateInfo? = withContext(Dispatchers.IO) {
         try {
             val url = if (isPreReleaseCheckEnabled) {
-                URL("https://api.github.com/repos/brittytino/essentials/releases")
+                URL("https://api.github.com/repos/brittytino/patchwork/releases")
             } else {
-                URL("https://api.github.com/repos/brittytino/essentials/releases/latest")
+                URL("https://api.github.com/repos/brittytino/patchwork/releases/latest")
             }
             
             val releaseData = url.readText()
