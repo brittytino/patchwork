@@ -2,33 +2,58 @@ package com.brittytino.patchwork.services.tiles
 
 import android.graphics.drawable.Icon
 import android.service.quicksettings.Tile
+import android.util.Log
 import com.brittytino.patchwork.R
 import com.brittytino.patchwork.utils.PermissionUtils
+import com.brittytino.patchwork.utils.DeviceCompat
 import androidx.core.content.edit
 
 class DynamicNightLightTileService : BaseTileService() {
 
+    companion object {
+        private const val TAG = "DynamicNightLightTileService"
+    }
+
     override fun onTileClick() {
+        if (!DeviceCompat.isNightLightSupported(this)) {
+            Log.w(TAG, "Night Light not supported on ${DeviceCompat.getDeviceInfo()}")
+            return
+        }
+        
         val prefs = getSharedPreferences("essentials_prefs", MODE_PRIVATE)
         val isEnabled = prefs.getBoolean("dynamic_night_light_enabled", false)
         prefs.edit { putBoolean("dynamic_night_light_enabled", !isEnabled) }
+        
+        DeviceCompat.logFeatureCapability("Dynamic Night Light", true, 
+            "Using ${DeviceCompat.getNightLightSettingName(this)}")
     }
 
     override fun getTileLabel(): String = "Dynamic Night Light"
 
     override fun getTileSubtitle(): String {
-        return if (qsTile.state == Tile.STATE_ACTIVE) "Enabled" else "Disabled"
+        return if (!DeviceCompat.isNightLightSupported(this)) {
+            "Not Supported"
+        } else if (qsTile.state == Tile.STATE_ACTIVE) {
+            "Enabled"
+        } else {
+            "Disabled"
+        }
     }
 
     override fun hasFeaturePermission(): Boolean {
         // Accessibility is required to monitor apps
         return PermissionUtils.isAccessibilityServiceEnabled(this) &&
-               PermissionUtils.canWriteSecureSettings(this)
+               PermissionUtils.canWriteSecureSettings(this) &&
+               DeviceCompat.isNightLightSupported(this)
     }
 
     override fun getTileIcon(): Icon = Icon.createWithResource(this, R.drawable.rounded_nightlight_24)
 
     override fun getTileState(): Int {
+        if (!DeviceCompat.isNightLightSupported(this)) {
+            return Tile.STATE_UNAVAILABLE
+        }
+        
         val enabled = getSharedPreferences("essentials_prefs", MODE_PRIVATE)
             .getBoolean("dynamic_night_light_enabled", false)
         return if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE

@@ -22,6 +22,9 @@ class PatchworkApp : Application() {
         ShizukuUtils.initialize()
         com.brittytino.patchwork.utils.LogManager.init(this)
         
+        // Init Action History Logger
+        com.brittytino.patchwork.utils.ActionLogger.init(this)
+        
         // Init Automation
         com.brittytino.patchwork.domain.diy.DIYRepository.init(this)
         com.brittytino.patchwork.services.automation.AutomationManager.init(this)

@@ -44,10 +44,11 @@ Patchwork is a feature-rich Android utility app designed for power users, enthus
 - **🎨 Beautiful Design**: Material 3 design with full dark mode and pitch black theme support.
 - **🔓 Open Source**: Fully transparent, community-driven development.
 - **🌍 Multi-Language**: Available in 30+ languages thanks to community translators.
+- **📱 Universal Compatibility**: Works on ALL Android devices (Android 8.0+), not just Pixel or Samsung!
 
 ### Perfect For:
 
-- **Pixel Users**: Unlock exclusive Pixel features on any Pixel device (and some on other brands!)
+- **All Android Users**: Works universally on Pixel, Samsung, Xiaomi, OnePlus, Motorola, and more!
 - **Power Users**: Advanced customization and automation capabilities
 - **Privacy-Conscious**: Control exactly what your device does and when
 - **Developers**: Test and debug with enhanced tools
@@ -135,44 +136,45 @@ Prevent unauthorized access to sensitive controls when your device is locked:
 - Disable Quick Settings tiles when locked
 - Block power menu access
 - Protect network settings (WiFi, Mobile Data, Airplane Mode)
-- Perfect for Pixel devices where QS tiles are accessible on lock screen
+- Works on ALL Android devices with Device Admin capability
+- *Requires: Accessibility Service + WRITE_SECURE_SETTINGS + Device Admin*
 
 ## 🎨 Visual Customization
 
 ### **Status Bar Icons** 📊
-Granular control over which system icons appear in your status bar:
+Control which system icons appear in your status bar with universal device support:
 - Show/hide: WiFi, Mobile Data, Battery, Bluetooth, VPN, Alarm, and more
-- Per-icon toggles
-- OEM-dependent availability
+- Per-icon toggles with device-specific mapping
+- Works on all Android manufacturers (Pixel, Samsung, Xiaomi, OnePlus, etc.)
+- Automatic detection of available icons per device
 - Persistent across reboots
-- *Requires: WRITE_SECURE_SETTINGS permission*
+- *Requires: WRITE_SECURE_SETTINGS permission (via Shizuku or ADB)*
 
 ### **Notification Lighting** 💡
-Beautiful, customizable ambient lighting effects for notifications:
+Beautiful, customizable ambient lighting effects for notifications on ALL devices:
 - **Styles**: Glow, Spinner, Stroke, Pulse
 - Per-app color customization
 - Flashlight pulse option
-- Works with notification system
+- Works universally with overlay system
 - Screen-off notifications
 - *Requires: Display Over Other Apps + Accessibility + Notification Listener*
 
 ### **Dynamic Night Light** 🌙
-Automatically enable/disable Night Light based on the active app:
+Automatically enable/disable Night Light based on the active app - works across all brands:
 - Per-app Night Light profiles
-- Smooth transitions
+- Supports multiple OEM implementations (AOSP, Samsung, Xiaomi, OnePlus, Motorola)
+- Smooth transitions with automatic fallback
 - Automatic scheduling
 - Great for reading apps, social media, or any late-night usage
 - *Requires: Accessibility Service + WRITE_SECURE_SETTINGS*
 
-## ⚡ Quick Settings Tiles
-
-One-tap access to powerful system toggles. Available tiles include:
+## ⚡ Quick Settings Tiles**Works on all Android devices:**
 
 ### System Controls
-- **UI Blur**: Toggle system-wide blur effects
+- **UI Blur**: Toggle system-wide blur effects (with fallback for unsupported devices)
 - **Sensitive Content**: Hide notification details on lock screen
 - **Tap to Wake**: Enable/disable tap-to-wake
-- **AOD**: Toggle Always-On Display
+- **AOD**: Toggle Always-On Display (where supported)
 - **Mono Audio**: Switch to mono audio output
 - **NFC**: Quick NFC toggle
 - **Stay Awake**: Developer option for keeping screen on while charging
@@ -183,16 +185,18 @@ One-tap access to powerful system toggles. Available tiles include:
 - **Caffeinate**: Keep screen awake with duration control
 - **Sound Mode**: Cycle through Ring/Vibrate/Silent
 - **Bubbles**: Toggle notification bubbles
-- **Flashlight**: Quick flashlight toggle
+- **Flashlight**: Quick flashlight toggle (with intensity control on Android 13+)
 - **Flashlight Pulse**: Pulse flashlight for notifications
 
 ### Patchwork Features
 - **Notification Lighting**: Toggle lighting service
 - **Locked Security**: Toggle screen lock security
-- **Dynamic Night Light**: Per-app Night Light control
-- **App Freezing**: Quick freeze toggle
+- **Dynamic Night Light**: Per-app Night Light control (universal)
+- **App Freezing**: Quick freeze toggle (with Shizuku/Root)
 - **App Lock**: Toggle app lock protection
-- **Maps Power Saving**: Instant access to power-saving mode
+- **Maps Power Saving**: Instant access to power-saving mode (with Shizuku/Root)
+
+*Note: Most tiles work universally; WRITE_SECURE_SETTINGS required for some systemo power-saving mode
 
 *Requires: WRITE_SECURE_SETTINGS for most tiles*
 
@@ -231,8 +235,8 @@ Quick access to sound profile switching without entering settings.
 - 50 MB free storage space
 
 ### Recommended
-- **Android 13+** for full feature support
-- **Google Pixel devices** for optimal experience (though most features work on any Android)
+- **Shizuku or Root** for advanced features (optional but recommended)
+- Works optimally on: Pixel, Samsung, Xiaomi, OnePlus, Motorola, Realme, Oppo, Vivo, Nothing Phone, and all AOSP-based ROMss work on any Android)
 - **Shizuku or Root** for advanced features (optional but recommended)
 
 ### Permissions
@@ -292,7 +296,7 @@ Most Patchwork features work perfectly fine without elevated permissions! You'll
 
 Only features specifically marked "Requires: Shizuku or Root" (Maps Power Saving, App Freezing) need elevated access.
 
-**Note**: Some OEM-specific features may not work on all devices due to manufacturer customizations. Full feature set is available on Pixel and Samsung devices with the latest Android versions.
+**Note**: Patchwork is designed with universal compatibility in mind. All features work across different Android manufacturers with automatic device detection and graceful fallbacks for OEM-specific limitations.
 
 # Screenshots
 
@@ -436,7 +440,7 @@ Most Patchwork features work perfectly fine without elevated permissions! You'll
 
 Only features specifically marked "Requires: Shizuku or Root" (Maps Power Saving, App Freezing) need elevated access.
 
-**Note**: Some OEM-specific features may not work on all devices due to manufacturer customizations. Full feature set is available on Pixel and Samsung devices with the latest Android versions.
+**Note**: Patchwork is designed with universal compatibility in mind. All features work across different Android manufacturers with automatic device detection and graceful fallbacks for OEM-specific limitations.
 
 # Screenshots
 
@@ -503,5 +507,6 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 ---
 
 <p align="center">
-  Last updated: 2026-02-03
+  Last updated: 2026-02-04
 </p>
+

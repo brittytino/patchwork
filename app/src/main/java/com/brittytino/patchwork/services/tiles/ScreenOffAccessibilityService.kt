@@ -25,6 +25,9 @@ import com.brittytino.patchwork.services.handlers.*
 import com.brittytino.patchwork.services.receivers.FlashlightActionReceiver
 import com.brittytino.patchwork.utils.FreezeManager
 import com.brittytino.patchwork.services.InputEventListenerService
+import com.brittytino.patchwork.services.AppBehaviorEngine
+import com.brittytino.patchwork.services.AppCooldownEngine
+import kotlinx.coroutines.launch
 
 class ScreenOffAccessibilityService : AccessibilityService(), SensorEventListener {
 
@@ -36,6 +39,11 @@ class ScreenOffAccessibilityService : AccessibilityService(), SensorEventListene
     private lateinit var buttonRemapHandler: ButtonRemapHandler
     private lateinit var appFlowHandler: AppFlowHandler
     private lateinit var securityHandler: SecurityHandler
+    
+    // Engines
+    private lateinit var appBehaviorEngine: AppBehaviorEngine
+    private lateinit var appCooldownEngine: AppCooldownEngine
+    private var lastForegroundPackage: String? = null
 
     private var screenReceiver: BroadcastReceiver? = null
     
@@ -58,6 +66,10 @@ class ScreenOffAccessibilityService : AccessibilityService(), SensorEventListene
         buttonRemapHandler = ButtonRemapHandler(this, flashlightHandler)
         appFlowHandler = AppFlowHandler(this)
         securityHandler = SecurityHandler(this)
+        
+        // Initialize Engines
+        appBehaviorEngine = AppBehaviorEngine.getInstance(this)
+        appCooldownEngine = AppCooldownEngine.getInstance(this)
         
         flashlightHandler.register()
         
@@ -146,6 +158,9 @@ class ScreenOffAccessibilityService : AccessibilityService(), SensorEventListene
         if (event.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
             val packageName = event.packageName?.toString() ?: return
             appFlowHandler.onPackageChanged(packageName)
+            
+            // Handle App Behavior Engine foreground changes
+            handleAppForegroundChange(packageName, event.className?.toString())
         }
     }
 
@@ -226,6 +241,50 @@ class ScreenOffAccessibilityService : AccessibilityService(), SensorEventListene
             stopService(Intent(this, InputEventListenerService::class.java))
         } catch (e: Exception) {
             // Ignore
+        }
+    }
+    
+    private fun handleAppForegroundChange(packageName: String, className: String?) {
+        // Skip system UI and launcher events
+        if (packageName == "com.android.systemui" || 
+            className?.contains("Launcher") == true) {
+            return
+        }
+        
+        // Get app name
+        val appName = try {
+            val pm = packageManager
+            val appInfo = pm.getApplicationInfo(packageName, 0)
+            pm.getApplicationLabel(appInfo).toString()
+        } catch (e: Exception) {
+            packageName // Fallback to package name
+        }
+        
+        // Check cooldown BEFORE allowing app to enter foreground
+        serviceScope.launch {
+            val (shouldBlock, reason) = appCooldownEngine.checkAppLaunch(packageName, appName)
+            if (shouldBlock && reason != null) {
+                // Show blocking dialog and return to previous app
+                appCooldownEngine.showBlockingDialog(packageName, appName, reason) {
+                    // After dialog, go back
+                    performGlobalAction(GLOBAL_ACTION_BACK)
+                }
+                return@launch
+            }
+            
+            // Not blocked - proceed with normal handling
+            // Handle app exit for previous app
+            if (lastForegroundPackage != null && lastForegroundPackage != packageName) {
+                appBehaviorEngine.onAppExitForeground(lastForegroundPackage!!)
+                appCooldownEngine.onAppClosed(lastForegroundPackage!!, appName)
+            }
+            
+            // Handle app entry
+            if (packageName != lastForegroundPackage) {
+                appBehaviorEngine.onAppEnterForeground(packageName, appName)
+                appCooldownEngine.onAppOpened(packageName, appName)
+                lastForegroundPackage = packageName
+            }
         }
     }
 }
