@@ -1,6 +1,6 @@
-# Contributing to Essentials
+# Contributing to Patchwork
 
-Thank you for your interest in contributing to Essentials! This guide will help you set up your development environment and understand the architecture of the project.
+Thank you for your interest in contributing to Patchwork! This guide will help you set up your development environment and understand the architecture of the project.
 
 ## Environment Setup
 
@@ -15,7 +15,7 @@ Thank you for your interest in contributing to Essentials! This guide will help 
 
 ## Architecture Overview
 
-Essentials follows a modern Android architecture:
+Patchwork follows a modern Android architecture:
 
 - **Language**: Kotlin
 - **UI Framework**: Jetpack Compose

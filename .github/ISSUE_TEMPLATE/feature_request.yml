@@ -1,5 +1,5 @@
 name: Feature Request
-description: Suggest a new feature for the Essentials Android app
+description: Suggest a new feature for the Patchwork Android app
 title: "[Feature]: "
 labels: ["enhancement"]
 assignees: ["brittytino"]
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in improving Essentials! Please fill out the form below to suggest a new feature.
+        Thanks for your interest in improving Patchwork! Please fill out the form below to suggest a new feature.
   - type: textarea
     id: problem
     attributes:

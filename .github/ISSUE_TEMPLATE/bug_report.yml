@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a bug in the Essentials Android app
+description: Report a bug in the Patchwork Android app
 title: "[Bug]: "
 labels: ["bug"]
 assignees: ["brittytino"]
@@ -60,8 +60,8 @@ body:
     id: app-version
     attributes:
       label: App Version
-      description: What version of the Essentials app are you using?
-      placeholder: e.g., 1.0.0
+      description: What version of the Patchwork app are you using?
+      placeholder: e.g., 1.1.0
     validations:
       required: true
   - type: textarea

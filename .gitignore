@@ -30,8 +30,29 @@ replay_pid*
 *.DS_Store
 *app/release/
 
-# Keystore files
+# Android local properties
+local.properties
+
+# Keystore files (NEVER commit these!)
 *.keystore
 *.jks
 
+# Build logs and temporary files
+build-*.txt
+*.log
+full-build.log
+
+# Generated files
 Build/
+build/
+app/build/
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
