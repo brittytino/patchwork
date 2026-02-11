@@ -11,31 +11,31 @@ Patchwork is an all-in-one power user toolkit that unlocks the full potential of
 
 <p align="center">
   <a href="https://github.com/brittytino/patchwork/releases/latest">
-    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/brittytino/patchwork?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=blue">
+    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/brittytino/patchwork?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=blue" />
   </a>
   <a href="https://github.com/brittytino/patchwork/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/brittytino/patchwork?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=black&color=green">
+    <img alt="License" src="https://img.shields.io/github/license/brittytino/patchwork?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=black&color=green" />
   </a>
   <a href="https://github.com/brittytino/patchwork/releases/latest">
-    <img alt="GitHub Downloads" src="https://img.shields.io/github/downloads/brittytino/patchwork/total?style=for-the-badge&logo=android&logoColor=white&labelColor=black&color=purple">
+    <img alt="GitHub Downloads" src="https://img.shields.io/github/downloads/brittytino/patchwork/total?style=for-the-badge&logo=download&logoColor=white&labelColor=black&color=orange" />
   </a>
   <a href="https://github.com/brittytino/patchwork/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/brittytino/patchwork?style=for-the-badge&logo=starship&logoColor=white&labelColor=black&color=yellow">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/brittytino/patchwork?style=for-the-badge&logo=starship&logoColor=white&labelColor=black&color=yellow" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/brittytino/patchwork/issues/new?assignees=&labels=bug&template=bug_report.yml">
-    <img alt="Report Bug" src="https://img.shields.io/badge/Report_Bug-red?style=for-the-badge&logo=openbugbounty&logoColor=white">
+    <img alt="Report Bug" src="https://img.shields.io/badge/Report_Bug-red?style=for-the-badge&logo=openbugbounty&logoColor=white" />
   </a>
   <a href="https://github.com/brittytino/patchwork/issues/new?assignees=&labels=enhancement&template=feature_request.yml">
-    <img alt="Request Feature" src="https://img.shields.io/badge/Request_Feature-orange?style=for-the-badge&logo=apachespark&logoColor=white">
+    <img alt="Request Feature" src="https://img.shields.io/badge/Request_Feature-orange?style=for-the-badge&logo=apachespark&logoColor=white" />
   </a>
   <a href="https://crowdin.com/project/patchwork-android">
-    <img alt="Crowdin" src="https://img.shields.io/badge/Translate-30%2B_Languages-cyan?style=for-the-badge&logo=crowdin&logoColor=white">
+    <img alt="Translate" src="https://img.shields.io/badge/Translate-30%2B_Languages-cyan?style=for-the-badge&logo=crowdin&logoColor=white" />
   </a>
   <a href="https://t.me/tidwib">
-    <img alt="Join Community" src="https://img.shields.io/badge/Join_Community-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">
+    <img alt="Join Community" src="https://img.shields.io/badge/Join_Community-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
   </a>
 </p>
 
@@ -413,91 +413,6 @@ If you find Patchwork useful, consider:
 
 Every bit of support helps keep the project alive and growing!
 
-## Root Access
-
-If your device is rooted, Patchwork can use root privileges directly.
-
-### Advantages:
-- No need for Shizuku
-- Persistent access across reboots
-- Slightly faster execution for some features
-
-### Setup:
-1. Ensure your device is rooted (Magisk recommended)
-2. Grant Patchwork root permission when prompted
-3. Root access will be used automatically for compatible features
-
-## Without Shizuku or Root
-
-Most Patchwork features work perfectly fine without elevated permissions! You'll still have access to:
-- Quick Settings Tiles (basic)
-- Visual customizations (Status Bar, Notification Lighting, Dynamic Night Light with limitations)
-- Notification features (Snooze Notifications)
-- Location Reached (Travel Alarm)
-- Screen Off Widget
-- Button Remap (limited functionality)
-- App Lock
-- Watermark
-- System Keyboard
-- Batteries Monitor
-- And much more!
-
-Only features specifically marked "Requires: Shizuku or Root" (Maps Power Saving, App Freezing) need elevated access.
-
-**Note**: Patchwork is designed with universal compatibility in mind. All features work across different Android manufacturers with automatic device detection and graceful fallbacks for OEM-specific limitations.
-
-# Screenshots
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a6a574ac-a1cb-44d5-b8c7-4fbca08647f1" width="19%" />
-  <img src="https://github.com/user-attachments/assets/e2b20eff-a232-420c-be90-b1308363f4f7" width="19%" />
-  <img src="https://github.com/user-attachments/assets/7fb98791-e4b4-43f1-98a8-4ab6aeb1d0f0" width="19%" />
-  <img src="https://github.com/user-attachments/assets/f126681d-ba53-4e45-911c-c9cb69350848" width="19%" />
-  <img src="https://github.com/user-attachments/assets/fc1593ec-ebf4-485a-bef4-7dd8ae6edb2a" width="19%" />
-</p>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/36dfaed1-89b5-4998-987b-40d5203598a7" width="19%" />
-  <img src="https://github.com/user-attachments/assets/22e9deea-6fb8-43bc-9923-f711f5447c70" width="19%" />
-  <img src="https://github.com/user-attachments/assets/d0eb5302-9432-4618-896b-7d9e5b7cf9cd" width="19%" />
-  <img src="https://github.com/user-attachments/assets/50d762a5-5bc6-46e7-a9ce-9ccfc207957f" width="19%" />
-  <img src="https://github.com/user-attachments/assets/d77c91c0-a1b3-45e4-9123-eee0f09a558f" width="19%" />
-</p>
-
-# Shell Providers (Shizuku & Root)
-
-- Patchwork supports both **Shizuku** and **Root** as shell providers for executing advanced system-level commands.
-- **Shizuku**: Make sure to get the latest version of Shizuku preferably from a fork such as [yangFenTuoZi/Shizuku](https://github.com/yangFenTuoZi/Shizuku) or other not from the Google Play as it is no longer well supported especially with Android 16 QPR1 up.
-- **Root**: If your device is rooted, Patchwork can bypass Shizuku and use root privileges directly for features like Button Remap and App Freezing.
-
-# How to grant accessibility permissions
-
-<img width="1280" height="696" alt="image" src="https://github.com/user-attachments/assets/685115e7-4caa-4add-9196-d2e1e2c126a6" />
-
-# Localization
-
-Help us bring Patchwork to more people around the world! If you're fluent in another language, you can contribute by translating the app on Crowdin.
-
-[![Crowdin](https://badges.crowdin.net/patchwork-android/localized.svg)](https://crowdin.com/project/patchwork-android)
-
-[Support translation on Crowdin](https://crowdin.com/project/patchwork-android)
-
-Patchwork is currently available in **30+ languages**, all thanks to our amazing community translators. If you're fluent in another language or want to improve existing translations, we'd love your contribution!
-
-### How to Contribute:
-1. Visit our [Crowdin project page](https://crowdin.com/project/patchwork-android)
-2. Select your language (or request a new one)
-3. Start translating!
-
-No technical knowledge required—just language skills and a few minutes of your time. Every translation helps make Patchwork accessible to more users worldwide.
-
-**Current Languages**: English, Spanish, French, German, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, Hindi, and many more!
-
-# Contributing
-
-We welcome contributions from the community! Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated.
-
-Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
 # Stars <3
 
 <a href="https://star-history.com/#brittytino/patchwork&Date">
@@ -511,6 +426,6 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 ---
 
 <p align="center">
-  Last updated: 2026-02-04
+  Last updated: 2026-02-11
 </p>
 
