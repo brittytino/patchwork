@@ -48,39 +48,48 @@ jobs:
       - name: Rename and Prepare APK
         run: |
           mkdir -p release-artifacts
+          
+          # Extract version from app/build.gradle.kts (assumes versionName "x.y.z")
+          VERSION_NAME=$(grep 'versionName' app/build.gradle.kts | awk -F'"' '{print $2}')
+          echo "Detected Version: $VERSION_NAME"
+          
           if [ -f "app/build/outputs/apk/release/app-release.apk" ]; then
-            cp app/build/outputs/apk/release/app-release.apk release-artifacts/patchwork-v1.1.0.apk
+            cp app/build/outputs/apk/release/app-release.apk "release-artifacts/patchwork-v${VERSION_NAME}.apk"
+            echo "APK_NAME=patchwork-v${VERSION_NAME}.apk" >> $GITHUB_ENV
+            echo "APP_VERSION=$VERSION_NAME" >> $GITHUB_ENV
           else
             echo "Release APK not found"
             exit 1
           fi
+
       - name: Upload Release APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: patchwork-release-${{ github.sha }}
-          path: release-artifacts/patchwork-v1.1.0.apk
+          path: release-artifacts/${{ env.APK_NAME }}
           retention-days: 90
           
       - name: Create or Update Latest Release
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.1.0
-          name: Patchwork v1.1.0 (Latest)
+          tag_name: latest
+          name: Patchwork v${{ env.APP_VERSION }} (Latest)
           body: |
             ## 🚀 Latest Production Build
             
-            **Automatically built from latest commit:** ${{ github.sha }}
+            **Version:** v${{ env.APP_VERSION }}
+            **Build:** ${{ github.sha }}
             
             ### 📦 Download
-            - **patchwork-v1.1.0.apk** - Official Release Build
+            - **${{ env.APK_NAME }}** - Official Release Build
             
             ### 📝 Recent Changes
             See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for full version history.
             
             ---
             *This is an automated production build. Install the APK below on your Android device.*
-          files: release-artifacts/patchwork-v1.1.0.apk
+          files: release-artifacts/${{ env.APK_NAME }}
           draft: false
           prerelease: false
           
