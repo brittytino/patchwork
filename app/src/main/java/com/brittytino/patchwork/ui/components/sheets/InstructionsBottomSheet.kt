@@ -192,7 +192,7 @@ fun InstructionsBottomSheet(
 
                     OutlinedButton(
                         onClick = {
-                            val mailUri = "mailto:mail@brittytino.com".toUri()
+                            val mailUri = "mailto:mail@brittytino08@gmail.com".toUri()
                             val emailIntent = Intent(Intent.ACTION_SENDTO, mailUri).apply {
                                 putExtra(Intent.EXTRA_SUBJECT, "Hello from Essentials")
                             }
