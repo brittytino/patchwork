@@ -527,10 +527,11 @@ object FeatureRegistry {
             category = R.string.cat_tools,
             description = R.string.feat_app_behavior_desc,
             permissionKeys = listOf("ACCESSIBILITY"),
-            showToggle = false
+            showToggle = true
         ) {
-            override fun isEnabled(viewModel: MainViewModel) = true
-            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) {}
+            override fun isEnabled(viewModel: MainViewModel) = viewModel.isAppBehaviorControllerEnabled.value
+            override fun isToggleEnabled(viewModel: MainViewModel, context: Context) = viewModel.isAccessibilityEnabled.value
+            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) = viewModel.setAppBehaviorControllerEnabled(enabled, context)
         },
 
         object : Feature(
@@ -540,10 +541,11 @@ object FeatureRegistry {
             category = R.string.cat_tools,
             description = R.string.feat_app_cooldown_desc,
             permissionKeys = listOf("ACCESSIBILITY", "DRAW_OVERLAYS"),
-            showToggle = false
+            showToggle = true
         ) {
-            override fun isEnabled(viewModel: MainViewModel) = true
-            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) {}
+            override fun isEnabled(viewModel: MainViewModel) = viewModel.isSmartAppCooldownEnabled.value
+            override fun isToggleEnabled(viewModel: MainViewModel, context: Context) = viewModel.isAccessibilityEnabled.value && viewModel.isOverlayPermissionGranted.value
+            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) = viewModel.setSmartAppCooldownEnabled(enabled, context)
         },
 
         object : Feature(
@@ -553,10 +555,11 @@ object FeatureRegistry {
             category = R.string.cat_tools,
             description = R.string.feat_idle_app_desc,
             permissionKeys = listOf("USAGE_STATS"),
-            showToggle = false
+            showToggle = true
         ) {
-            override fun isEnabled(viewModel: MainViewModel) = true
-            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) {}
+            override fun isEnabled(viewModel: MainViewModel) = viewModel.isIdleAppAutoActionEnabled.value
+            override fun isToggleEnabled(viewModel: MainViewModel, context: Context) = viewModel.isUsageStatsPermissionGranted.value
+            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) = viewModel.setIdleAppAutoActionEnabled(enabled, context)
         },
 
         object : Feature(
@@ -565,10 +568,10 @@ object FeatureRegistry {
             iconRes = R.drawable.rounded_fiber_smart_record_24,
             category = R.string.cat_tools,
             description = R.string.feat_action_history_desc,
-            showToggle = false
+            showToggle = true
         ) {
-            override fun isEnabled(viewModel: MainViewModel) = true
-            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) {}
+            override fun isEnabled(viewModel: MainViewModel) = viewModel.isActionHistoryEnabled.value
+            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) = viewModel.setActionHistoryEnabled(enabled, context)
         },
 
         object : Feature(
@@ -578,10 +581,11 @@ object FeatureRegistry {
             category = R.string.cat_tools,
             description = R.string.feat_system_snapshots_desc,
             permissionKeys = listOf("WRITE_SECURE_SETTINGS"),
-            showToggle = false
+            showToggle = true
         ) {
-            override fun isEnabled(viewModel: MainViewModel) = true
-            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) {}
+            override fun isEnabled(viewModel: MainViewModel) = viewModel.isSystemSnapshotsEnabled.value
+            override fun isToggleEnabled(viewModel: MainViewModel, context: Context) = viewModel.isWriteSecureSettingsEnabled.value
+            override fun onToggle(viewModel: MainViewModel, context: Context, enabled: Boolean) = viewModel.setSystemSnapshotsEnabled(enabled, context)
         },
 
         object : Feature(
