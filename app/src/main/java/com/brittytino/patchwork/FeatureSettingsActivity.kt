@@ -112,7 +112,7 @@ class FeatureSettingsActivity : FragmentActivity() {
                 val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
                 PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                     LinkPickerScreen(
-                        uri = "https://brittytino.com".toUri(),
+                        uri = "https://tinobritty.me".toUri(),
                         onFinish = { finish() },
                         modifier = Modifier.fillMaxSize(),
                         demo = true

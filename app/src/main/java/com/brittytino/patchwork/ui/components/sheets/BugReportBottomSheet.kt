@@ -234,7 +234,7 @@ fun BugReportBottomSheet(
                     onClick = {
                         val intent = Intent(Intent.ACTION_SENDTO).apply {
                             data = Uri.parse("mailto:")
-                            putExtra(Intent.EXTRA_EMAIL, arrayOf("mail@brittytino.com"))
+                            putExtra(Intent.EXTRA_EMAIL, arrayOf("mail@brittytino08@gmail.com"))
                             putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.bug_report_email_subject))
                             putExtra(Intent.EXTRA_TEXT, contentToShare)
                         }

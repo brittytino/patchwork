@@ -28,6 +28,13 @@ class PatchworkApp : Application() {
         // Init Automation
         com.brittytino.patchwork.domain.diy.DIYRepository.init(this)
         com.brittytino.patchwork.services.automation.AutomationManager.init(this)
+        
+        // Init Idle App Monitor if enabled
+        val prefs = getSharedPreferences("essentials_prefs", Context.MODE_PRIVATE)
+        val isIdleAppEnabled = prefs.getBoolean("idle_app_auto_action_enabled", false)
+        if (isIdleAppEnabled) {
+            com.brittytino.patchwork.services.IdleAppEngine.getInstance(this).startMonitoring()
+        }
 
         val intentFilter = IntentFilter(Intent.ACTION_SCREEN_OFF)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {

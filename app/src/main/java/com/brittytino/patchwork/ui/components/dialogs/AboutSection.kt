@@ -95,7 +95,7 @@ fun AboutSection(
             ) {
                 Button(
                     onClick = {
-                        val websiteUrl = "https://brittytino.com"
+                        val websiteUrl = "https://tinobritty.me"
                         val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
                         context.startActivity(intent)
                     },
@@ -130,7 +130,7 @@ fun AboutSection(
                 OutlinedButton(
                     onClick = {
                         // Use mailto: URI so the system opens an email client
-                        val mailUri = "mailto:mail@brittytino.com".toUri()
+                        val mailUri = "mailto:mail@brittytino08@gmail.com".toUri()
                         val emailIntent = Intent(Intent.ACTION_SENDTO, mailUri).apply {
                             putExtra(Intent.EXTRA_SUBJECT, "Hello from Essentials")
                         }

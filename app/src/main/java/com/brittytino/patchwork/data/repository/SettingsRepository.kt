@@ -88,6 +88,13 @@ class SettingsRepository(private val context: Context) {
         const val KEY_FREEZE_AUTO_EXCLUDED_APPS = "freeze_auto_excluded_apps"
         const val KEY_FREEZE_SELECTED_APPS = "freeze_selected_apps"
         
+        // Hidden features
+        const val KEY_APP_BEHAVIOR_CONTROLLER_ENABLED = "app_behavior_controller_enabled"
+        const val KEY_SMART_APP_COOLDOWN_ENABLED = "smart_app_cooldown_enabled"
+        const val KEY_IDLE_APP_AUTO_ACTION_ENABLED = "idle_app_auto_action_enabled"
+        const val KEY_ACTION_HISTORY_ENABLED = "action_history_enabled"
+        const val KEY_SYSTEM_SNAPSHOTS_ENABLED = "system_snapshots_enabled"
+        
         const val KEY_DEVELOPER_MODE_ENABLED = "developer_mode_enabled"
         const val KEY_HAPTIC_FEEDBACK_TYPE = "haptic_feedback_type"
         const val KEY_DEFAULT_TAB = "default_tab"

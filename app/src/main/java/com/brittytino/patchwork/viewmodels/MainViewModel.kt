@@ -113,6 +113,13 @@ class MainViewModel : ViewModel() {
     val isFreezePickedAppsLoading = mutableStateOf(false)
     val freezeAutoExcludedApps = mutableStateOf<Set<String>>(emptySet())
 
+    // Hidden features
+    val isAppBehaviorControllerEnabled = mutableStateOf(false)
+    val isSmartAppCooldownEnabled = mutableStateOf(false)
+    val isIdleAppAutoActionEnabled = mutableStateOf(false)
+    val isActionHistoryEnabled = mutableStateOf(false)
+    val isSystemSnapshotsEnabled = mutableStateOf(false)
+
     // Search state
     val searchQuery = mutableStateOf("")
     val searchResults = mutableStateOf<List<SearchableItem>>(emptyList())
@@ -181,6 +188,22 @@ class MainViewModel : ViewModel() {
             SettingsRepository.KEY_FREEZE_AUTO_EXCLUDED_APPS -> {
                 freezeAutoExcludedApps.value = settingsRepository.getFreezeAutoExcludedApps()
             }
+            SettingsRepository.KEY_APP_BEHAVIOR_CONTROLLER_ENABLED -> isAppBehaviorControllerEnabled.value = settingsRepository.getBoolean(key)
+            SettingsRepository.KEY_SMART_APP_COOLDOWN_ENABLED -> isSmartAppCooldownEnabled.value = settingsRepository.getBoolean(key)
+            SettingsRepository.KEY_IDLE_APP_AUTO_ACTION_ENABLED -> {
+                val enabled = settingsRepository.getBoolean(key)
+                isIdleAppAutoActionEnabled.value = enabled
+                // Auto-start/stop monitoring
+                appContext?.let { ctx ->
+                    if (enabled) {
+                        com.brittytino.patchwork.services.IdleAppEngine.getInstance(ctx).startMonitoring()
+                    } else {
+                        com.brittytino.patchwork.services.IdleAppEngine.getInstance(ctx).stopMonitoring()
+                    }
+                }
+            }
+            SettingsRepository.KEY_ACTION_HISTORY_ENABLED -> isActionHistoryEnabled.value = settingsRepository.getBoolean(key)
+            SettingsRepository.KEY_SYSTEM_SNAPSHOTS_ENABLED -> isSystemSnapshotsEnabled.value = settingsRepository.getBoolean(key)
             SettingsRepository.KEY_USE_ROOT -> isRootEnabled.value = settingsRepository.getBoolean(key)
             SettingsRepository.KEY_CHECK_PRE_RELEASES_ENABLED -> isPreReleaseCheckEnabled.value = settingsRepository.getBoolean(key)
             SettingsRepository.KEY_DEVELOPER_MODE_ENABLED -> {
@@ -365,6 +388,14 @@ class MainViewModel : ViewModel() {
         isFreezeWhenLockedEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_FREEZE_WHEN_LOCKED_ENABLED)
         freezeLockDelayIndex.intValue = settingsRepository.getInt(SettingsRepository.KEY_FREEZE_LOCK_DELAY_INDEX, 1)
         freezeAutoExcludedApps.value = settingsRepository.getFreezeAutoExcludedApps()
+        
+        // Hidden features
+        isAppBehaviorControllerEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_APP_BEHAVIOR_CONTROLLER_ENABLED)
+        isSmartAppCooldownEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_SMART_APP_COOLDOWN_ENABLED)
+        isIdleAppAutoActionEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_IDLE_APP_AUTO_ACTION_ENABLED)
+        isActionHistoryEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_ACTION_HISTORY_ENABLED)
+        isSystemSnapshotsEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_SYSTEM_SNAPSHOTS_ENABLED)
+        
         isDeveloperModeEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_DEVELOPER_MODE_ENABLED)
         isPreReleaseCheckEnabled.value = settingsRepository.getBoolean(SettingsRepository.KEY_CHECK_PRE_RELEASES_ENABLED)
         pinnedFeatureKeys.value = settingsRepository.getPinnedFeatures()
@@ -594,6 +625,38 @@ class MainViewModel : ViewModel() {
     fun setFreezeWhenLockedEnabled(enabled: Boolean, context: Context) {
         isFreezeWhenLockedEnabled.value = enabled
         settingsRepository.putBoolean(SettingsRepository.KEY_FREEZE_WHEN_LOCKED_ENABLED, enabled)
+    }
+
+    fun setAppBehaviorControllerEnabled(enabled: Boolean, context: Context) {
+        isAppBehaviorControllerEnabled.value = enabled
+        settingsRepository.putBoolean(SettingsRepository.KEY_APP_BEHAVIOR_CONTROLLER_ENABLED, enabled)
+    }
+
+    fun setSmartAppCooldownEnabled(enabled: Boolean, context: Context) {
+        isSmartAppCooldownEnabled.value = enabled
+        settingsRepository.putBoolean(SettingsRepository.KEY_SMART_APP_COOLDOWN_ENABLED, enabled)
+    }
+
+    fun setIdleAppAutoActionEnabled(enabled: Boolean, context: Context) {
+        isIdleAppAutoActionEnabled.value = enabled
+        settingsRepository.putBoolean(SettingsRepository.KEY_IDLE_APP_AUTO_ACTION_ENABLED, enabled)
+        
+        // Auto-start/stop IdleAppEngine monitoring when enabled/disabled
+        if (enabled) {
+            com.brittytino.patchwork.services.IdleAppEngine.getInstance(context).startMonitoring()
+        } else {
+            com.brittytino.patchwork.services.IdleAppEngine.getInstance(context).stopMonitoring()
+        }
+    }
+
+    fun setActionHistoryEnabled(enabled: Boolean, context: Context) {
+        isActionHistoryEnabled.value = enabled
+        settingsRepository.putBoolean(SettingsRepository.KEY_ACTION_HISTORY_ENABLED, enabled)
+    }
+
+    fun setSystemSnapshotsEnabled(enabled: Boolean, context: Context) {
+        isSystemSnapshotsEnabled.value = enabled
+        settingsRepository.putBoolean(SettingsRepository.KEY_SYSTEM_SNAPSHOTS_ENABLED, enabled)
     }
 
     fun setFreezeLockDelayIndex(index: Int, context: Context) {
