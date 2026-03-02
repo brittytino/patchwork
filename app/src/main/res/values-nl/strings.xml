@@ -613,7 +613,7 @@
     <string name="about_desc_private_dns">Privé-DNS in-/uitschakelen.\n\nDoor de Uit/Automatisch/Hostnaam privé-DNS-modi schakelen.</string>
     <string name="about_desc_usb_debugging">USB-foutopsporing in-/uitschakelen.\n\nToegang tot foutopsporing via USB in-/uitschakelen via de snelle instellingen.</string>
     <string name="about_desc_color_picker">Open het pipethulpmiddel om kleuren te kiezen, geïntroduceerd in Android 17 Bèta 2</string>
-    <string name="about_desc_charge_optimization">Optimize your battery life by limiting the maximum charge or using adaptive charging. This is specially designed for Pixel devices to ensure longevity and healthy charging cycles.\n\nCredits: TebbeUbben/ChargeQuickTile</string>
+    <string name="about_desc_charge_optimization">Optimize your battery life by limiting the maximum charge or using adaptive charging. This is designed for Android devices to ensure longevity and healthy charging cycles.\n\nCredits: TebbeUbben/ChargeQuickTile</string>
     <string name="action_download">Downloaden</string>
     <!-- DIY Section -->
     <string name="diy_trigger_screen_off">Scherm uit</string>
@@ -660,7 +660,7 @@
     <string name="diy_sound_mode_desc">Deze actie laat je switchen tussen Geluid, Trillen en de Stille modi op basis van triggers. Het vereist hiervoor toegang tot Niet Storen.</string>
     <!-- About Section -->
     <string name="app_developer_name">Tino Britty</string>
-    <string name="app_description">De alles omvattende gereedschapskist voor je Pixel en Android-apparaten</string>
+    <string name="app_description">Android Device Power User Toolkit</string>
     <!-- Edge Lighting -->
     <string name="color_mode_system">Systeem</string>
     <string name="color_mode_custom">Aangepast</string>

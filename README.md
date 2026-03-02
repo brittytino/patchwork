@@ -1,6 +1,6 @@
 # Patchwork
 
-**Your Android device, supercharged.** 🚀
+**Android Device Power User Toolkit** 🚀
 
 Patchwork is an all-in-one power user toolkit that unlocks the full potential of your Android device. Built with Kotlin and Jetpack Compose, it brings together essential tools, advanced customizations, and clever workarounds to enhance your Android experience—all in one beautiful Material 3 app.
 

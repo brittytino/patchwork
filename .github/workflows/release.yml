@@ -44,13 +44,10 @@ jobs:
             ## Patchwork ${{ github.ref_name }}
             
             ### What's New
-            - First official release 🎉
-            - Complete app rename from Essentials to Patchwork
-            - All features fully functional
-            - 30+ languages supported
+            See commit history for full details.
             
             ### Features
-            - 🛠️ **Productivity & Tools**: Maps Power Saving, Travel Alarm, DIY Automation, Button Remap, App Freezing, and more
+            - 🛠️ **Productivity & Tools**: Maps Power Saving, Travel Alarm, DIY Automation, Button Remap, App Freezing
             - 🔒 **Security & Privacy**: App Lock, Screen Locked Security
             - 🎨 **Visual Customization**: Status Bar Icons, Notification Lighting, Dynamic Night Light
             - ⚡ **Quick Settings Tiles**: 20+ useful system toggles
@@ -64,8 +61,7 @@ jobs:
             ### Installation
             1. Download `patchwork-${{ github.ref_name }}.apk` below
             2. Enable "Install from unknown sources" in your device settings
-            3. Install the APK
-            4. Grant permissions as needed for features you want to use
+            3. Install the APK and grant permissions as needed
             
             ### Developer
             Built with ❤️ by [Tino Britty J](https://github.com/brittytino)

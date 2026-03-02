@@ -613,7 +613,7 @@
     <string name="about_desc_private_dns">Activez ou désactivez le DNS Privé.\n\nChangez entre les modes désactivé, automatique et nom d\'hôte. </string>
     <string name="about_desc_usb_debugging">Activez ou désactivez le débogage USB.\n\nActivez ou désactiver l\'accès au débogage ADB directement depuis les \"Réglages rapides\".</string>
     <string name="about_desc_color_picker">Launch the eye dropper tool to pick colors introduced in Android 17 BETA 2</string>
-    <string name="about_desc_charge_optimization">Optimize your battery life by limiting the maximum charge or using adaptive charging. This is specially designed for Pixel devices to ensure longevity and healthy charging cycles.\n\nCredits: TebbeUbben/ChargeQuickTile</string>
+    <string name="about_desc_charge_optimization">Optimize your battery life by limiting the maximum charge or using adaptive charging. This is designed for Android devices to ensure longevity and healthy charging cycles.\n\nCredits: TebbeUbben/ChargeQuickTile</string>
     <string name="action_download">Télécharger</string>
     <!-- DIY Section -->
     <string name="diy_trigger_screen_off">Écran éteint</string>
@@ -660,7 +660,7 @@
     <string name="diy_sound_mode_desc">Cette action permet de changer entre les modes Son, Vibreur et Silencieux en fonction des déclencheurs. Cela nécessite l\'accès au mode \"Ne pas déranger\".</string>
     <!-- About Section -->
     <string name="app_developer_name">Tino Britty</string>
-    <string name="app_description">L\'outil tout-en-un pour votre Pixel ou vos appareils Android</string>
+    <string name="app_description">Android Device Power User Toolkit</string>
     <!-- Edge Lighting -->
     <string name="color_mode_system">Système</string>
     <string name="color_mode_custom">Personnalisé</string>
