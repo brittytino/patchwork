@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Essentials</string>
+    <string name="app_name">Patchwork</string>
     <string name="label_beta">BÊTA</string>
     <string name="accessibility_service_description"><b>Service d\'accessibilité Essentials</b>\n\nCe service est requis pour les fonctionnalités suivantes :\n\n<b>• Réattribution d\'un bouton physique :</b>\nDétecte les appuis sur le bouton volume même si l\'écran est éteint pour déclencher des actions comme allumer la lampe-torche.\n\n<b>• Réglage par appli :</b>\nSurveille les applications actives pour appliquer des profils spécifiques pour le mode éclairage nocturne dynamique, le réglage de couleurs des notifications lumineuses et le verrouillage d\'applis.\n\n<b>• Contrôler l\'écran :</b>\nAutorise l\'application à verrouiller l\'écran (par exemple en utilisant le Double Tap ou les Widgets) et détecter le changement d\'état de l\'écran.\n\n<b>• Sécurité :</b>\nPrévenir les changements non autorisé en détectant le contenu des fenêtres lorsque l\'appareil est verrouillé.\n\n<small>Aucun texte saisi ou de données utilisateur sensibles sont collectées ou transmises.</small></string>
     <string name="freeze_activity_title">Gel d\'applis</string>
@@ -659,7 +659,7 @@
     <string name="diy_action_sound_mode">Mode de sonnerie</string>
     <string name="diy_sound_mode_desc">Cette action permet de changer entre les modes Son, Vibreur et Silencieux en fonction des déclencheurs. Cela nécessite l\'accès au mode \"Ne pas déranger\".</string>
     <!-- About Section -->
-    <string name="app_developer_name">Sameera Wijerathna</string>
+    <string name="app_developer_name">Tino Britty</string>
     <string name="app_description">L\'outil tout-en-un pour votre Pixel ou vos appareils Android</string>
     <!-- Edge Lighting -->
     <string name="color_mode_system">Système</string>
@@ -1051,7 +1051,7 @@
     <string name="feat_watch_title">Montre</string>
     <string name="feat_watch_desc">Intégrations avec WearOS</string>
     <string name="watch_no_companion_title">Aucune montre détectée</string>
-    <string name="watch_no_companion_desc">Il semble que vous n\'ayez pas l\'application compagnon Essentials Wear installée sur votre montre.</string>
+    <string name="watch_no_companion_desc">Il semble que vous n\'ayez pas l\'application compagnon Patchwork Wear installée sur votre montre.</string>
     <string name="watch_install_companion_action">Installer l\'appli compagnon</string>
     <string name="cat_interaction">Interaction</string>
     <string name="cat_interface">Interface</string>

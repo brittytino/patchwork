@@ -1,4 +1,4 @@
-package com.brittytino.patchwork
+﻿package com.brittytino.patchwork
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -28,7 +28,7 @@ import coil.compose.AsyncImage
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import com.brittytino.patchwork.services.tiles.ScreenOffAccessibilityService
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import java.util.concurrent.Executor
 
 class AppLockActivity : FragmentActivity() {
@@ -56,7 +56,7 @@ class AppLockActivity : FragmentActivity() {
         }
 
         setContent {
-            EssentialsTheme {
+            PatchworkTheme {
                 AppLockScreen()
             }
         }

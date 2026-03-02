@@ -112,7 +112,7 @@ class BatteriesWidgetReceiver : GlanceAppWidgetReceiver() {
                     }
                 context.sendBroadcast(
                     requestIntent,
-                    "com.brittytino.permission.ESSENTIALS_AIRSYNC_BRIDGE"
+                    "com.brittytino.permission.PATCHWORK_AIRSYNC_BRIDGE"
                 )
             } catch (e: Exception) {
                 // Ignore if AirSync not installed/found

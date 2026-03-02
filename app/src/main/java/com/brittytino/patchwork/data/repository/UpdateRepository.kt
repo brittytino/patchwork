@@ -14,9 +14,9 @@ class UpdateRepository {
     ): UpdateInfo? = withContext(Dispatchers.IO) {
         try {
             val urlString = if (isPreReleaseCheckEnabled) {
-                "https://api.github.com/repos/sameerasw/essentials/releases"
+                "https://api.github.com/repos/brittytino/patchwork/releases"
             } else {
-                "https://api.github.com/repos/sameerasw/essentials/releases/latest"
+                "https://api.github.com/repos/brittytino/patchwork/releases/latest"
             }
 
             val url = URL(urlString)

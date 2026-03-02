@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.activities
+﻿package com.brittytino.patchwork.ui.activities
 
 import android.app.Activity
 import android.content.ClipData
@@ -17,7 +17,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.brittytino.patchwork.R
 import com.brittytino.patchwork.ui.components.sheets.ColorPickerBottomSheet
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.HapticUtil
 
 class ColorPickerActivity : ComponentActivity() {
@@ -48,7 +48,7 @@ class ColorPickerActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         
         setContent {
-            EssentialsTheme {
+            PatchworkTheme {
                 if (showBottomSheet && pickedColor != null) {
                     ColorPickerBottomSheet(
                         colorInt = pickedColor!!,

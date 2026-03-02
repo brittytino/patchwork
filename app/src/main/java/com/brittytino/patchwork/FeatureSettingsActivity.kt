@@ -1,4 +1,4 @@
-package com.brittytino.patchwork
+﻿package com.brittytino.patchwork
 
 import android.os.Build
 import android.os.Bundle
@@ -68,7 +68,7 @@ import com.brittytino.patchwork.ui.composables.configs.SoundModeTileSettingsUI
 import com.brittytino.patchwork.ui.composables.configs.StatusBarIconSettingsUI
 import com.brittytino.patchwork.ui.composables.configs.TextAnimationsSettingsUI
 import com.brittytino.patchwork.ui.composables.configs.WatchSettingsUI
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.BiometricSecurityHelper
 import com.brittytino.patchwork.utils.HapticUtil
 import com.brittytino.patchwork.viewmodels.CaffeinateViewModel
@@ -107,7 +107,7 @@ class FeatureSettingsActivity : FragmentActivity() {
                     viewModel.check(context)
                 }
                 val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-                EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+                PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                     LinkPickerScreen(
                         uri = "https://tinobritty.me".toUri(),
                         onFinish = { finish() },
@@ -156,7 +156,7 @@ class FeatureSettingsActivity : FragmentActivity() {
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
             val pinnedFeatureKeys by viewModel.pinnedFeatureKeys
 
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 androidx.compose.runtime.CompositionLocalProvider(
                     com.brittytino.patchwork.ui.state.LocalMenuStateManager provides remember { com.brittytino.patchwork.ui.state.MenuStateManager() }
                 ) {

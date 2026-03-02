@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.activities
+﻿package com.brittytino.patchwork.ui.activities
 
 import android.content.Context
 import android.content.Intent
@@ -74,7 +74,7 @@ import com.brittytino.patchwork.ui.components.menus.SegmentedDropdownMenuItem
 import com.brittytino.patchwork.ui.components.pickers.SegmentedPicker
 import com.brittytino.patchwork.ui.components.sheets.DimWallpaperSettingsSheet
 import com.brittytino.patchwork.ui.components.sheets.SoundModeSettingsSheet
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.AppUtil
 import com.brittytino.patchwork.utils.HapticUtil
 import kotlinx.coroutines.Dispatchers
@@ -139,7 +139,7 @@ class AutomationEditorActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val view = LocalView.current
                 var carouselState = rememberCarouselState { 2 } // 0: Trigger/State, 1: Actions
 

@@ -1,4 +1,4 @@
-package com.brittytino.patchwork
+﻿package com.brittytino.patchwork
 
 import android.Manifest
 import android.content.ClipData
@@ -68,7 +68,7 @@ import com.brittytino.patchwork.ui.components.dialogs.AboutSection
 import com.brittytino.patchwork.ui.components.pickers.DefaultTabPicker
 import com.brittytino.patchwork.ui.components.sheets.InstructionsBottomSheet
 import com.brittytino.patchwork.ui.components.sheets.UpdateBottomSheet
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.HapticUtil
 import com.brittytino.patchwork.utils.PermissionUtils
 import com.brittytino.patchwork.viewmodels.MainViewModel
@@ -100,7 +100,7 @@ class SettingsActivity : ComponentActivity() {
         Shizuku.addRequestPermissionResultListener(shizukuPermissionResultListener)
         setContent {
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val context = LocalContext.current
                 val view = LocalView.current
                 val scrollBehavior =

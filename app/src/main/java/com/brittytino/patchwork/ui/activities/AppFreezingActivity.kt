@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.activities
+﻿package com.brittytino.patchwork.ui.activities
 
 import android.content.Intent
 import android.os.Build
@@ -80,7 +80,7 @@ import com.brittytino.patchwork.R
 import com.brittytino.patchwork.domain.model.NotificationApp
 import com.brittytino.patchwork.ui.components.ReusableTopAppBar
 import com.brittytino.patchwork.ui.components.containers.RoundedCardContainer
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.FreezeManager
 import com.brittytino.patchwork.utils.HapticUtil
 import com.brittytino.patchwork.utils.ShortcutUtil
@@ -108,7 +108,7 @@ class AppFreezingActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val context = LocalContext.current
                 val view = LocalView.current
                 val pickedApps by viewModel.freezePickedApps

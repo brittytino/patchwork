@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ime
+﻿package com.brittytino.patchwork.ime
 
 import android.content.ClipboardManager
 import android.content.Context
@@ -32,7 +32,7 @@ import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.brittytino.patchwork.data.repository.SettingsRepository
 import com.brittytino.patchwork.ui.ime.KeyboardInputView
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -136,7 +136,7 @@ class EssentialsInputMethodService : InputMethodService(), LifecycleOwner, ViewM
         )
 
         view.setContent {
-            EssentialsTheme {
+            PatchworkTheme {
                 val context = androidx.compose.ui.platform.LocalContext.current
                 val prefs =
                     remember { context.getSharedPreferences("essentials_prefs", MODE_PRIVATE) }
@@ -389,7 +389,7 @@ class EssentialsInputMethodService : InputMethodService(), LifecycleOwner, ViewM
                 val suggestions by suggestionEngine.suggestions.collectAsState()
                 val resetTrigger by kbdResetTrigger.collectAsState()
 
-                EssentialsTheme(
+                PatchworkTheme(
                     darkTheme = useDarkTheme,
                     pitchBlackTheme = isPitchBlack
                 ) {

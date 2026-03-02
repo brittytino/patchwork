@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.activities
+﻿package com.brittytino.patchwork.ui.activities
 
 import android.content.Context
 import android.os.Bundle
@@ -50,7 +50,7 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.rememberModalBottomSheetState
 import com.brittytino.patchwork.R
 import com.brittytino.patchwork.ui.components.containers.RoundedCardContainer
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.HapticUtil
 
 class PrivateDnsSettingsActivity : ComponentActivity() {
@@ -65,7 +65,7 @@ class PrivateDnsSettingsActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 PrivateDnsSettingsOverlay(onDismiss = { finish() })
             }
         }

@@ -1,4 +1,4 @@
-package com.brittytino.patchwork
+﻿package com.brittytino.patchwork
 
 import android.os.Build
 import android.os.Bundle
@@ -53,7 +53,7 @@ import com.brittytino.patchwork.ui.components.cards.TrackedRepoCard
 import com.brittytino.patchwork.ui.components.containers.RoundedCardContainer
 import com.brittytino.patchwork.ui.components.sheets.AddRepoBottomSheet
 import com.brittytino.patchwork.ui.components.sheets.UpdateBottomSheet
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.HapticUtil
 import com.brittytino.patchwork.viewmodels.AppUpdatesViewModel
 import com.brittytino.patchwork.viewmodels.MainViewModel
@@ -168,7 +168,7 @@ class AppUpdatesActivity : FragmentActivity() {
                 viewModel.check(context)
             }
 
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 val scrollBehavior =
                     TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
 

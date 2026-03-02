@@ -107,7 +107,7 @@ class AppUpdatesViewModel : ViewModel() {
         }
 
         val (owner, repo) = parts
-        if (owner.lowercase() == "sameerasw" && repo.lowercase() == "essentials") {
+        if (owner.lowercase() == "brittytino" && repo.lowercase() == "essentials") {
             _errorMessage.value = context.getString(R.string.msg_restrict_own_app_repo)
             _shouldDismissSheet.value = true
             return

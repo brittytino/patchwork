@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.theme
+﻿package com.brittytino.patchwork.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -23,7 +23,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun EssentialsTheme(
+fun PatchworkTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     pitchBlackTheme: Boolean = false,
     // Dynamic color is available on Android 12+

@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.activities
+﻿package com.brittytino.patchwork.ui.activities
 
 import android.content.Context
 import android.content.Intent
@@ -44,7 +44,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.brittytino.patchwork.R
 import com.brittytino.patchwork.services.receivers.FlashlightActionReceiver
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.FlashlightUtil
 import com.brittytino.patchwork.utils.HapticUtil
 
@@ -82,7 +82,7 @@ class FlashlightIntensityActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 FlashlightIntensityOverlay(onDismiss = { finish() })
             }
         }

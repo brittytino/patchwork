@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Essentials</string>
+    <string name="app_name">Patchwork</string>
     <string name="label_beta">BETA</string>
     <string name="accessibility_service_description"><b>Toegankelijkheidsservice van Essentials</b>\n\nDeze service is vereist voor de volgende geavanceerde functies:\n\n<b>• Opnieuw toewijzen van fysieke knoppen:</b>\nDetecteert het klikken van de volumeknoppen, zelfs wanneer het scherm uit is, om acties te starten zoals de zaklamp.\n\n<b>• Instellingen per app:</b>\nBekijkt de momenteel actieve app om specifieke profielen toe te passen voor Dynamisch nachtlicht, Meldingsbelichtingskleuren en Appvergrendeling.\n\n<b>• Schermbesturing:</b>\nLaat de app het scherm vergrendelen (bijv. met dubbelklikken of met widgets) en veranderingen van schermstaat detecteren.\n\n<b>• Beveiliging:</b>\nVoorkomt ongeautoriseerde wijzigingen door vensterinhoud te detecteren wanneer het apparaat vergrendeld is.\n\n<small>Geen invoertekst of gevoelige gebruikersdata wordt verzameld of overgezet.</small></string>
     <string name="freeze_activity_title">Apps bevriezen</string>
@@ -595,7 +595,7 @@
     <string name="about_desc_system_keyboard">Een aangepaste invoermethode waar niemand om vroeg.\n\nHet is gewoon een experiment. Meerdere talen krijgen mogelijk geen ondersteuning omdat het een complexe en tijdrovende implementatie is.</string>
     <string name="about_desc_batteries">Hou het batterijniveau van alle verbonden apparaten in de gaten. \n\n Bekijk de batterijstatus van je Bluetooth koptelefoon, horloge en andere accessoires op één plek. Verbind met AirSync om ook het batterijniveau van je Mac te bekijken.</string>
     <string name="about_desc_watermark">Voeg een aangepast onderschrift/watermerk toe aan je foto\'s met EXIF-data en apparaatinformatie.\n\nDeel een afbeelding direct vanuit een andere app naar Essentials om makkelijk een watermerk toe te voegen.</string>
-    <string name="about_desc_calendar_sync">Synchroniseer al je opkomende kalendergebeurtenissen zelfs met de beperkingen op werk of school Google-accounts die dat niet toestaan op wearOS apparaten. \n\nZorg ervoor dat je de wearOS Essentials app ook installeert om het rooster in de app en in een tegel te laten zien.</string>
+    <string name="about_desc_calendar_sync">Synchroniseer al je opkomende kalendergebeurtenissen zelfs met de beperkingen op werk of school Google-accounts die dat niet toestaan op wearOS apparaten. \n\nZorg ervoor dat je de wearOS Patchwork app ook installeert om het rooster in de app en in een tegel te laten zien.</string>
     <string name="about_desc_app_updates">Volg updates voor je geïnstalleerde apps.\n\nKrijg een melding over beschikbare updates, bekijk het Wijzigingslogboek en installeer ze met de klik van een knop.</string>
     <string name="about_desc_call_vibrations">Voeg haptische feedback toe aan je oproepen.\n\nTrillen wanneer een oproep is verbonden, niet meer verbonden of geaccepteerd is, wat een bevestiging geeft zonder naar je scherm te hoeven kijken.</string>
     <string name="about_desc_sound_mode_tile">Snel schakelen tussen Geluid, Trillen en Stil modi.\n\nEen handige tegel om schakelen tussen je geluidsmodi zonder de volumetoetsen of de instellingen. Je kan de modi hersorteren of uitschakelen als je ze niet nodig hebt bij het schakelen.</string>
@@ -659,7 +659,7 @@
     <string name="diy_action_sound_mode">Geluidsmodus</string>
     <string name="diy_sound_mode_desc">Deze actie laat je switchen tussen Geluid, Trillen en de Stille modi op basis van triggers. Het vereist hiervoor toegang tot Niet Storen.</string>
     <!-- About Section -->
-    <string name="app_developer_name">Sameera Wijerathna</string>
+    <string name="app_developer_name">Tino Britty</string>
     <string name="app_description">De alles omvattende gereedschapskist voor je Pixel en Android-apparaten</string>
     <!-- Edge Lighting -->
     <string name="color_mode_system">Systeem</string>
@@ -1051,7 +1051,7 @@
     <string name="feat_watch_title">Horloge</string>
     <string name="feat_watch_desc">Integraties met WearOS</string>
     <string name="watch_no_companion_title">Geen horloge gedetecteerd</string>
-    <string name="watch_no_companion_desc">Het lijkt erop dat je niet de bijbehorende Essentials Wear-app hebt geïnstalleerd op je horloge.</string>
+    <string name="watch_no_companion_desc">Het lijkt erop dat je niet de bijbehorende Patchwork Wear-app hebt geïnstalleerd op je horloge.</string>
     <string name="watch_install_companion_action">Bijbehorende app installeren</string>
     <string name="cat_interaction">Interacties</string>
     <string name="cat_interface">Interface</string>

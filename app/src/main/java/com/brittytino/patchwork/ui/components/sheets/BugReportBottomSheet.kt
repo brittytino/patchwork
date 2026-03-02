@@ -227,7 +227,7 @@ fun BugReportBottomSheet(
                         val encodedBody = Uri.encode(contentToShare)
                         val intent = Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("https://github.com/sameerasw/essentials/issues/new?body=$encodedBody")
+                            Uri.parse("https://github.com/brittytino/patchwork/issues/new?body=$encodedBody")
                         )
                         context.startActivity(intent)
                     },

@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.activities
+﻿package com.brittytino.patchwork.ui.activities
 
 import android.content.Intent
 import android.net.Uri
@@ -19,7 +19,7 @@ import androidx.core.view.WindowCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.brittytino.patchwork.data.repository.SettingsRepository
 import com.brittytino.patchwork.ui.composables.watermark.WatermarkScreen
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.viewmodels.WatermarkViewModel
 
 class WatermarkActivity : ComponentActivity() {
@@ -61,7 +61,7 @@ class WatermarkActivity : ComponentActivity() {
                 initial = false
             )
 
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 Surface(color = MaterialTheme.colorScheme.surfaceContainer) {
                     val context = LocalContext.current
                     val viewModel: WatermarkViewModel = viewModel(

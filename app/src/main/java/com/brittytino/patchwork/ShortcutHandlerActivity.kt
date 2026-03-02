@@ -1,4 +1,4 @@
-package com.brittytino.patchwork
+﻿package com.brittytino.patchwork
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import com.brittytino.patchwork.ui.activities.AppFreezingActivity
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.FreezeManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -48,7 +48,7 @@ class ShortcutHandlerActivity : ComponentActivity() {
                     viewModel.check(context)
                 }
                 val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-                EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+                PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center

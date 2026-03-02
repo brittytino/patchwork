@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Essentials</string>
+    <string name="app_name">Patchwork</string>
     <string name="label_beta">ベータ</string>
     <string name="accessibility_service_description"><b>Essentials アクセシビリティサービス</b>\n\nこのサービスは、以下の高度な機能に必要です。\n\n<b>・物理ボタンの再マッピング：</b>\n画面がオフの場合でも音量ボタンの押下を検出し、懐中電灯などのアクションを実行します。\n\n<b>・アプリごとの設定：</b>\n現在アクティブなアプリを監視し、ダイナミックナイトモード、通知ライトの色、アプリロックの特定のプロファイルを適用します。\n\n<b>・画面制御：</b>\nアプリが画面をロック（ダブルタップやウィジェット経由など）し、画面の状態の変化を検出できるようにします。\n\n<b>・セキュリティ：</b>\nデバイスがロックされているときにウィンドウの内容を検出することで、不正な変更を防ぎます。\n\n<small>入力テキストや機密性の高いユーザーデータは収集または送信されません。</small></string>
     <string name="freeze_activity_title">アプリフリーズ</string>
@@ -595,7 +595,7 @@
     <string name="about_desc_system_keyboard">誰も求めていないカスタム入力方式。\n\nこれは現在、実験的機能です。複数言語のサポートは、実装が非常に複雑で時間がかかるため、提供されない可能性があります。</string>
     <string name="about_desc_batteries">接続されたすべてのデバイスのバッテリー残量を表示します。\n\nBluetoothヘッドフォン、スマートウォッチ、その他のアクセサリのバッテリー状態を一箇所で確認できます。AirSyncアプリケーションと連携すれば、Macのバッテリー残量も表示可能です。</string>
     <string name="about_desc_watermark">写真にEXIFデータやデバイス情報を含むカスタムキャプション、透かしを追加できます。\n\n他のアプリから画像を直接Essentialsに共有し、簡単に透かしを追加できます。</string>
-    <string name="about_desc_calendar_sync">Googleアカウントの制限により、職場や学校のポリシーでwearOSデバイスに追加できない場合でも、今後の予定をすべて同期できます。\n\nwearOS Essentialsコンパニオンアプリをインストールし、スケジュールをアプリ内やタイル、コンプリケーションで表示できるようにしてください。</string>
+    <string name="about_desc_calendar_sync">Googleアカウントの制限により、職場や学校のポリシーでwearOSデバイスに追加できない場合でも、今後の予定をすべて同期できます。\n\nwearOS Patchworkコンパニオンアプリをインストールし、スケジュールをアプリ内やタイル、コンプリケーションで表示できるようにしてください。</string>
     <string name="about_desc_app_updates">インストール済みアプリの更新情報を確認しましょう。\n\n利用可能な更新通知を受け取り、変更履歴を確認し、タップするだけで簡単にインストールできます。</string>
     <string name="about_desc_call_vibrations">通話に触覚フィードバックを追加します。\n\n通話が接続、切断、または応答されると振動し、画面を見なくても触覚で確認できます。</string>
     <string name="about_desc_sound_mode_tile">サイレントオフ、バイブレーション、サイレントを素早く切り替えます。\n\n音量ボタンや設定を使わずに着信音モードを変更できる便利なタイルです。モードの順序を変更したり、不要な場合は無効にしてタイルの切り替え動作をカスタマイズできます。</string>
@@ -659,7 +659,7 @@
     <string name="diy_action_sound_mode">サイレントモード</string>
     <string name="diy_sound_mode_desc">この操作により、トリガーに基づいてサイレントオフ、バイブレーション、サイレントを切り替えることができます。マナーモードへのアクセス権が必要です。</string>
     <!-- About Section -->
-    <string name="app_developer_name">Sameera Wijerathna</string>
+    <string name="app_developer_name">Tino Britty</string>
     <string name="app_description">あなたのPixelとAndroidのオールインワンツールボックス</string>
     <!-- Edge Lighting -->
     <string name="color_mode_system">システム</string>
@@ -925,7 +925,7 @@
     <string name="action_report_github">GitHub Issueを開く</string>
     <string name="action_report_email">メールで報告</string>
     <string name="action_copy_clipboard">クリップボードにコピー</string>
-    <string name="bug_report_email_subject">Essentials Bug Report (バグレポート)</string>
+    <string name="bug_report_email_subject">Patchwork Bug Report (バグレポート)</string>
     <string name="bug_report_send_via">送信方法</string>
     <!-- Location Reached -->
     <string name="feat_location_reached_title">Are We There Yet?</string>
@@ -1051,7 +1051,7 @@
     <string name="feat_watch_title">スマートウォッチ</string>
     <string name="feat_watch_desc">WearOSと連携する</string>
     <string name="watch_no_companion_title">スマートウォッチが検出されませんでした</string>
-    <string name="watch_no_companion_desc">お使いのスマートウォッチにEssentials Wearコンパニオンアプリがインストールされていないようです。</string>
+    <string name="watch_no_companion_desc">お使いのスマートウォッチにPatchwork Wearコンパニオンアプリがインストールされていないようです。</string>
     <string name="watch_install_companion_action">コンパニオンをインストール</string>
     <string name="cat_interaction">Interaction</string>
     <string name="cat_interface">Interface</string>

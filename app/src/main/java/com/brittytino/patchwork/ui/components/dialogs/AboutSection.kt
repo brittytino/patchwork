@@ -117,7 +117,7 @@ fun AboutSection(
 
                 Button(
                     onClick = {
-                        val websiteUrl = "https://github.com/sameerasw/essentials"
+                        val websiteUrl = "https://github.com/brittytino/patchwork"
                         val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
                         context.startActivity(intent)
                     },
@@ -182,7 +182,7 @@ fun AboutSection(
 
                 OutlinedButton(
                     onClick = {
-                        val websiteUrl = "https://buymeacoffee.com/sameerasw"
+                        val websiteUrl = "https://buymeacoffee.com/tinobritty"
                         val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
                         context.startActivity(intent)
                     },
@@ -248,7 +248,7 @@ fun AboutSection(
 
                 OutlinedButton(
                     onClick = {
-                        val websiteUrl = "https://github.com/sameerasw/canvas"
+                        val websiteUrl = "https://github.com/brittytino/canvas"
                         val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
                         context.startActivity(intent)
                     },
@@ -265,7 +265,7 @@ fun AboutSection(
 
                 OutlinedButton(
                     onClick = {
-                        val websiteUrl = "https://github.com/sameerasw/tasks"
+                        val websiteUrl = "https://github.com/brittytino/tasks"
                         val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
                         context.startActivity(intent)
                     },
@@ -282,7 +282,7 @@ fun AboutSection(
 
                 OutlinedButton(
                     onClick = {
-                        val websiteUrl = "https://github.com/sameerasw/Browser"
+                        val websiteUrl = "https://github.com/brittytino/Browser"
                         val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
                         context.startActivity(intent)
                     },

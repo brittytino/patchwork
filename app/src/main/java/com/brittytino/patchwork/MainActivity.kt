@@ -1,4 +1,4 @@
-package com.brittytino.patchwork
+﻿package com.brittytino.patchwork
 
 import android.animation.ObjectAnimator
 import android.content.Intent
@@ -97,7 +97,7 @@ import com.brittytino.patchwork.ui.components.menus.SegmentedDropdownMenuItem
 import com.brittytino.patchwork.ui.composables.DIYScreen
 import com.brittytino.patchwork.ui.composables.FreezeGridUI
 import com.brittytino.patchwork.ui.composables.SetupFeatures
-import com.brittytino.patchwork.ui.theme.EssentialsTheme
+import com.brittytino.patchwork.ui.theme.PatchworkTheme
 import com.brittytino.patchwork.utils.HapticUtil
 import com.brittytino.patchwork.viewmodels.AppUpdatesViewModel
 import com.brittytino.patchwork.viewmodels.GitHubAuthViewModel
@@ -235,7 +235,7 @@ class MainActivity : FragmentActivity() {
         viewModel.check(this)
         setContent {
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 androidx.compose.runtime.CompositionLocalProvider(
                     com.brittytino.patchwork.ui.state.LocalMenuStateManager provides remember { com.brittytino.patchwork.ui.state.MenuStateManager() }
                 ) {

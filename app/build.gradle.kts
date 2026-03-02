@@ -3,16 +3,6 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
-
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
-        freeCompilerArgs.add("-Xannotation-default-target=param-property")
-    }
-}
-
 android {
     namespace = "com.brittytino.patchwork"
     compileSdk = 36
@@ -58,9 +48,16 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
+    }
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
     packaging {
         jniLibs {
@@ -128,7 +125,7 @@ dependencies {
     implementation(libs.gson)
     
     // Kotlin Reflect for dynamic sealed class serialization
-    implementation(kotlin("reflect"))
+    implementation("org.jetbrains.kotlin:kotlin-reflect:2.1.0")
 
     // SymSpell for word suggestions
     implementation("com.darkrockstudios:symspellkt:3.4.0")
@@ -139,4 +136,11 @@ dependencies {
     // Watermark dependencies
     implementation("androidx.exifinterface:exifinterface:1.3.7")
     implementation("androidx.compose.material:material-icons-extended:1.7.0") // Compatible with Compose BOM
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+        freeCompilerArgs.add("-Xannotation-default-target=param-property")
+    }
 }

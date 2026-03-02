@@ -55,7 +55,7 @@ fun WatchSettingsUI(
                         modifier = Modifier.padding(top = 4.dp, bottom = 12.dp)
                     )
                     Button(
-                        onClick = { uriHandler.openUri("https://github.com/sameerasw/essentials-wear") },
+                        onClick = { uriHandler.openUri("https://github.com/brittytino/patchwork-wear") },
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.onPrimary,

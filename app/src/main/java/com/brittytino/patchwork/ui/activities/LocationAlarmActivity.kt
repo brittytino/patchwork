@@ -1,4 +1,4 @@
-package com.brittytino.patchwork.ui.activities
+﻿package com.brittytino.patchwork.ui.activities
 
 import android.app.KeyguardManager
 import android.content.Context
@@ -63,7 +63,7 @@ class LocationAlarmActivity : ComponentActivity() {
                 viewModel.check(context)
             }
             val isPitchBlackThemeEnabled by viewModel.isPitchBlackThemeEnabled
-            com.brittytino.patchwork.ui.theme.EssentialsTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
+            com.brittytino.patchwork.ui.theme.PatchworkTheme(pitchBlackTheme = isPitchBlackThemeEnabled) {
                 LocationAlarmScreen(onFinish = {
                     stopAlarmAndFinish()
                 })

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
@@ -30,8 +30,8 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
     <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS" tools:ignore="UnusedAttribute" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-    <permission android:name="com.brittytino.permission.ESSENTIALS_AIRSYNC_BRIDGE" android:protectionLevel="signature" />
-    <uses-permission android:name="com.brittytino.permission.ESSENTIALS_AIRSYNC_BRIDGE" />
+    <permission android:name="com.brittytino.permission.PATCHWORK_AIRSYNC_BRIDGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.brittytino.permission.PATCHWORK_AIRSYNC_BRIDGE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
 
@@ -51,12 +51,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:enableOnBackInvokedCallback="true"
-        android:theme="@style/Theme.Essentials">
+        android:theme="@style/Theme.Patchwork">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Essentials.Splash">
+            android:theme="@style/Theme.Patchwork.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -83,20 +83,20 @@
             android:name=".FeatureSettingsActivity"
             android:exported="false"
             android:label="Feature Settings"
-            android:theme="@style/Theme.Essentials">
+            android:theme="@style/Theme.Patchwork">
         </activity>
 
         <activity
             android:name=".SettingsActivity"
             android:exported="false"
             android:label="Settings"
-            android:theme="@style/Theme.Essentials">
+            android:theme="@style/Theme.Patchwork">
         </activity>
         <activity
             android:name=".AppUpdatesActivity"
             android:exported="false"
             android:label="@string/tab_app_updates_title"
-            android:theme="@style/Theme.Essentials">
+            android:theme="@style/Theme.Patchwork">
         </activity>
         <activity
             android:name=".ui.activities.ColorPickerActivity"
@@ -105,21 +105,21 @@
             android:noHistory="true"
             android:launchMode="singleInstance"
             android:taskAffinity=""
-            android:theme="@style/Theme.Essentials.Translucent">
+            android:theme="@style/Theme.Patchwork.Translucent">
         </activity>
 
         <activity
             android:name=".ui.activities.LocationAlarmActivity"
             android:exported="true"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.Essentials.FullScreenAlarm" />
+            android:theme="@style/Theme.Patchwork.FullScreenAlarm" />
 
 
         <activity
             android:name=".ui.activities.AutomationEditorActivity"
             android:exported="false"
             android:label="@string/diy_editor_new_title"
-            android:theme="@style/Theme.Essentials" />
+            android:theme="@style/Theme.Patchwork" />
 
 
         <service
@@ -132,14 +132,14 @@
             android:name=".ui.activities.AppFreezingActivity"
             android:exported="true"
             android:label="@string/freeze_activity_title"
-            android:theme="@style/Theme.Essentials">
+            android:theme="@style/Theme.Patchwork">
         </activity>
 
         <activity
             android:name=".LinkPickerActivity"
             android:exported="true"
             android:label="Open Link"
-            android:theme="@style/Theme.Essentials">
+            android:theme="@style/Theme.Patchwork">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -181,7 +181,7 @@
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:taskAffinity=""
-            android:theme="@style/Theme.Essentials.Translucent" />
+            android:theme="@style/Theme.Patchwork.Translucent" />
 
         <activity
             android:name=".ui.activities.TileAuthActivity"
@@ -189,7 +189,7 @@
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:taskAffinity=""
-            android:theme="@style/Theme.Essentials.Translucent" />
+            android:theme="@style/Theme.Patchwork.Translucent" />
 
         <activity
             android:name=".ui.activities.QSPreferencesActivity"
@@ -210,7 +210,7 @@
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:taskAffinity=""
-            android:theme="@style/Theme.Essentials.Translucent">
+            android:theme="@style/Theme.Patchwork.Translucent">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -223,7 +223,7 @@
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:taskAffinity=""
-            android:theme="@style/Theme.Essentials.Translucent" />
+            android:theme="@style/Theme.Patchwork.Translucent" />
 
         <activity
             android:name=".ui.activities.PrivateDnsSettingsActivity"
@@ -231,13 +231,13 @@
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:taskAffinity=""
-            android:theme="@style/Theme.Essentials.Translucent" />
+            android:theme="@style/Theme.Patchwork.Translucent" />
 
         <activity
             android:name=".ui.activities.WatermarkActivity"
             android:exported="true"
             android:label="@string/feat_watermark_title"
-            android:theme="@style/Theme.Essentials">
+            android:theme="@style/Theme.Patchwork">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -474,7 +474,7 @@
 
         <service
             android:name=".services.EssentialsConditionProvider"
-            android:label="Essentials Focus"
+            android:label="Patchwork Focus"
             android:permission="android.permission.BIND_CONDITION_PROVIDER_SERVICE"
             android:exported="true">
             <intent-filter>
@@ -660,7 +660,7 @@
         <receiver
             android:name=".services.receivers.AirSyncBridgeReceiver"
             android:exported="true"
-            android:permission="com.brittytino.permission.ESSENTIALS_AIRSYNC_BRIDGE">
+            android:permission="com.brittytino.permission.PATCHWORK_AIRSYNC_BRIDGE">
             <intent-filter>
                 <action android:name="com.brittytino.patchwork.action.UPDATE_MAC_BATTERY" />
             </intent-filter>
