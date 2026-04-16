@@ -294,14 +294,14 @@ class SettingsRepository(private val context: Context) {
     fun getDIYTab(): com.brittytino.patchwork.domain.DIYTabs {
         val tabName = prefs.getString(
             KEY_DEFAULT_TAB,
-            com.brittytino.patchwork.domain.DIYTabs.ESSENTIALS.name
+            com.brittytino.patchwork.domain.DIYTabs.PATCHWORK.name
         )
         return try {
             com.brittytino.patchwork.domain.DIYTabs.valueOf(
-                tabName ?: com.brittytino.patchwork.domain.DIYTabs.ESSENTIALS.name
+                tabName ?: com.brittytino.patchwork.domain.DIYTabs.PATCHWORK.name
             )
         } catch (e: Exception) {
-            com.brittytino.patchwork.domain.DIYTabs.ESSENTIALS
+            com.brittytino.patchwork.domain.DIYTabs.PATCHWORK
         }
     }
 

@@ -69,7 +69,7 @@ class MainViewModel : ViewModel() {
     val isOverlayPermissionGranted = mutableStateOf(false)
     val isNotificationLightingAccessibilityEnabled = mutableStateOf(false)
     val hapticFeedbackType = mutableStateOf(HapticFeedbackType.SUBTLE)
-    val defaultTab = mutableStateOf(com.brittytino.patchwork.domain.DIYTabs.ESSENTIALS)
+    val defaultTab = mutableStateOf(com.brittytino.patchwork.domain.DIYTabs.PATCHWORK)
     val isDefaultBrowserSet = mutableStateOf(false)
     val onlyShowWhenScreenOff = mutableStateOf(true)
     val isAmbientDisplayEnabled = mutableStateOf(false)

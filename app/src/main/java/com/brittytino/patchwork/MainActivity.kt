@@ -443,15 +443,15 @@ class MainActivity : FragmentActivity() {
                         topBar = {
                             val currentTab = remember(tabs, currentPage) {
                                 tabs.getOrNull(currentPage) ?: tabs.firstOrNull()
-                                ?: DIYTabs.ESSENTIALS
+                                ?: DIYTabs.PATCHWORK
                             }
                             ReusableTopAppBar(
                                 title = currentTab.title,
                                 subtitle = currentTab.subtitle,
                                 hasBack = false,
                                 hasSearch = true,
-                                hasSettings = currentTab == DIYTabs.ESSENTIALS || currentTab == DIYTabs.FREEZE,
-                                hasHelp = currentTab == DIYTabs.ESSENTIALS,
+                                hasSettings = currentTab == DIYTabs.PATCHWORK || currentTab == DIYTabs.FREEZE,
+                                hasHelp = currentTab == DIYTabs.PATCHWORK,
                                 helpIconRes = R.drawable.rounded_help_24,
                                 helpContentDescription = R.string.action_help_guide,
                                 onSearchClick = { searchRequested = true },
@@ -653,7 +653,7 @@ class MainActivity : FragmentActivity() {
                                 label = "Tab Transition"
                             ) { targetPage ->
                                 when (tabs[targetPage]) {
-                                        DIYTabs.ESSENTIALS -> {
+                                        DIYTabs.PATCHWORK -> {
                                             SetupFeatures(
                                                 viewModel = viewModel,
                                                 modifier = Modifier.padding(innerPadding),
