@@ -869,17 +869,10 @@
     <!-- QS / Activities -->
     <string name="error_unlock_network_settings">Entsperre das Handy, um die Netzwerkeinstellungen zu ändern</string>
     <!-- About Section -->
-    <string name="developed_by_format">Entwickelt von %1$s\nmit ❤\uFE0F in \uD83C\uDDF1\uD83C\uDDF0</string>
+    <string name="developed_by_format">Developed by Tino Britty J</string>
     <string name="action_website">Webseite</string>
     <string name="action_contact">Kontakt</string>
     <string name="action_telegram">Telegram</string>
-    <string name="action_support">Support</string>
-    <string name="label_other_apps">Andere Apps</string>
-    <string name="app_airsync">AirSync</string>
-    <string name="app_zenzero">ZenZero</string>
-    <string name="app_canvas">Canvas</string>
-    <string name="app_tasks">Tasks</string>
-    <string name="app_zero">Zero</string>
     <!-- Help & Guides -->
     <string name="help_guides_title">Hilfe &amp; Anleitungen</string>
     <string name="need_more_support_reach_out">Du benötigst weitere Unterstützung? Kontaktiere uns,</string>
@@ -918,7 +911,7 @@
     <!-- Bug Reporting -->
     <string name="toast_bug_report_copied">Fehlermeldung in die Zwischenablage kopiert</string>
     <string name="bug_report_title">Fehlermeldung</string>
-    <string name="bug_report_option_share_logs">bug_report_option_share_logs</string>
+    <string name="bug_report_option_share_logs">Protokolle teilen</string>
     <string name="bug_report_option_share_logs_desc">Protokolle und Details einbeziehen</string>
     <string name="bug_report_device_info">Geräteinfo</string>
     <string name="bug_report_raw_json">Rohbericht</string>

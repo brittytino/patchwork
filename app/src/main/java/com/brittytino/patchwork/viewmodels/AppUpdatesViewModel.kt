@@ -261,14 +261,18 @@ class AppUpdatesViewModel : ViewModel() {
         val urlPattern = Regex("(?:https?://)?(?:www\\.)?github\\.com/([^/]+)/([^/\\s?#]+).*")
         val urlMatch = urlPattern.matchEntire(query)
         if (urlMatch != null) {
-            return urlMatch.groupValues[1] to urlMatch.groupValues[2]
+            val owner = urlMatch.groupValues[1]
+            val repo = urlMatch.groupValues[2].removeSuffix(".git")
+            return owner to repo
         }
 
         // Handle owner/repo
         val simplePattern = Regex("([^/\\s]+)/([^/\\s]+)")
         val simpleMatch = simplePattern.matchEntire(query)
         if (simpleMatch != null) {
-            return simpleMatch.groupValues[1] to simpleMatch.groupValues[2]
+            val owner = simpleMatch.groupValues[1]
+            val repo = simpleMatch.groupValues[2].removeSuffix(".git")
+            return owner to repo
         }
 
         return null
@@ -301,7 +305,8 @@ class AppUpdatesViewModel : ViewModel() {
     }
 
     fun fetchReleaseNotesIfNeeded(context: Context, repo: TrackedRepo) {
-        if (!repo.latestReleaseBody.isNullOrBlank()) return
+        // Null means "not loaded yet". Empty string can be a valid "no notes" payload.
+        if (repo.latestReleaseBody != null) return
 
         viewModelScope.launch {
             try {
@@ -353,6 +358,7 @@ class AppUpdatesViewModel : ViewModel() {
 
             val updatedRepos = reposToCheck.toMutableList()
             var changesMade = false
+            var hitRateLimit = false
 
             for (i in updatedRepos.indices) {
                 val repo = updatedRepos[i]
@@ -400,6 +406,7 @@ class AppUpdatesViewModel : ViewModel() {
                     if (e.message == "RATE_LIMIT") {
                         _errorMessage.value =
                             context.getString(R.string.error_rate_limited)
+                        hitRateLimit = true
                         break
                     }
                 } finally {
@@ -407,6 +414,12 @@ class AppUpdatesViewModel : ViewModel() {
                     completedCount++
                     _updateProgress.value = completedCount.toFloat() / reposToCheck.size
                 }
+            }
+
+            // Avoid leaving refresh UI in a stuck loading state after early exits.
+            if (hitRateLimit) {
+                _refreshingRepoIds.value = emptySet()
+                _updateProgress.value = 0f
             }
 
             if (changesMade) {

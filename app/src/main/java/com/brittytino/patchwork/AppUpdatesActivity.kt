@@ -190,7 +190,7 @@ class AppUpdatesActivity : FragmentActivity() {
                 if (repoToShowReleaseNotesFullName != null) {
                     val repo = trackedRepos.find { it.fullName == repoToShowReleaseNotesFullName }
                     if (repo != null) {
-                        val isNotesLoading = repo.latestReleaseBody.isNullOrBlank()
+                        val isNotesLoading = repo.latestReleaseBody == null
                         UpdateBottomSheet(
                             updateInfo = com.brittytino.patchwork.domain.model.UpdateInfo(
                                 versionName = repo.latestTagName,

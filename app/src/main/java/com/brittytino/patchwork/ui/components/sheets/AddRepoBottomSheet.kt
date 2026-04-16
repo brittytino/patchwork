@@ -105,6 +105,20 @@ fun AddRepoBottomSheet(
         }
     }
 
+    val trackedRepoForEdit = remember(searchResult, viewModel.trackedRepos.value) {
+        viewModel.trackedRepos.value.find { it.fullName == searchResult?.fullName }
+    }
+
+    LaunchedEffect(searchResult?.fullName, latestRelease, trackedRepoForEdit?.selectedApkName) {
+        val availableApkNames = latestRelease?.assets
+            ?.filter { it.name.endsWith(".apk") }
+            ?.map { it.name }
+            .orEmpty()
+        val preferred = trackedRepoForEdit?.selectedApkName ?: "Auto"
+        selectedApkName =
+            if (preferred == "Auto" || availableApkNames.contains(preferred)) preferred else "Auto"
+    }
+
     if (showReleaseNotes && latestRelease != null) {
         val updateInfo = UpdateInfo(
             versionName = latestRelease!!.tagName,

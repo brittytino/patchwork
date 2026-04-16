@@ -869,17 +869,10 @@
     <!-- QS / Activities -->
     <string name="error_unlock_network_settings">Déverrouillez le téléphone pour changer les paramètres réseaux</string>
     <!-- About Section -->
-    <string name="developed_by_format">Développé par %1$s\n avec ❤\uFE0F du \uD83C\uDDF1\uD83C\uDDF0</string>
+    <string name="developed_by_format">Developed by Tino Britty J</string>
     <string name="action_website">Site web</string>
     <string name="action_contact">Contact</string>
     <string name="action_telegram">Telegram</string>
-    <string name="action_support">Support</string>
-    <string name="label_other_apps">Autres Applis</string>
-    <string name="app_airsync">AirSync</string>
-    <string name="app_zenzero">ZenZero</string>
-    <string name="app_canvas">Canvas</string>
-    <string name="app_tasks">Tasks</string>
-    <string name="app_zero">Zero</string>
     <!-- Help & Guides -->
     <string name="help_guides_title">Aide &amp; Guides</string>
     <string name="need_more_support_reach_out">Besoin de plus d\'aide ? Contactez-nous :</string>

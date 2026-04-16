@@ -869,17 +869,10 @@
     <!-- QS / Activities -->
     <string name="error_unlock_network_settings">ネットワーク設定を変更するには、ロックを解除してください</string>
     <!-- About Section -->
-    <string name="developed_by_format">制作者 %1$s\n with ❤\uFE0F from \uD83C\uDDF1\uD83C\uDDF0</string>
+    <string name="developed_by_format">Developed by Tino Britty J</string>
     <string name="action_website">ウェブサイト</string>
     <string name="action_contact">お問い合わせ</string>
     <string name="action_telegram">Telegram</string>
-    <string name="action_support">サポート</string>
-    <string name="label_other_apps">その他のアプリ</string>
-    <string name="app_airsync">AirSync</string>
-    <string name="app_zenzero">ZenZero</string>
-    <string name="app_canvas">Canvas</string>
-    <string name="app_tasks">Tasks</string>
-    <string name="app_zero">Zero</string>
     <!-- Help & Guides -->
     <string name="help_guides_title">ヘルプ&amp;ガイド</string>
     <string name="need_more_support_reach_out">さらにサポートが必要ですか？</string>

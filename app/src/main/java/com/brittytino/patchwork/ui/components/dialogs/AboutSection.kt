@@ -5,8 +5,6 @@ import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,7 +14,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -26,8 +23,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -41,7 +36,6 @@ import com.brittytino.patchwork.R
 fun AboutSection(
     modifier: Modifier = Modifier,
     appName: String = stringResource(R.string.app_name),
-    developerName: String = stringResource(R.string.app_developer_name),
     description: String = stringResource(R.string.app_description),
     onAvatarLongClick: () -> Unit = {}
 ) {
@@ -53,8 +47,7 @@ fun AboutSection(
     }
 
     Surface(
-        modifier = modifier
-            .fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         shape = MaterialTheme.shapes.medium,
         color = MaterialTheme.colorScheme.surfaceBright
     ) {
@@ -70,26 +63,14 @@ fun AboutSection(
                 textAlign = TextAlign.Center
             )
 
-            Image(
-                painter = painterResource(id = R.drawable.avatar),
-                contentDescription = "Developer Avatar",
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .size(120.dp)
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(MaterialTheme.colorScheme.primary)
-                    .combinedClickable(
-                        onClick = {},
-                        onLongClick = {
-                            onAvatarLongClick()
-                        }
-                    )
-            )
-
             Text(
-                text = stringResource(R.string.developed_by_format, developerName),
+                text = stringResource(R.string.developed_by_format),
                 style = MaterialTheme.typography.titleMedium,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                modifier = Modifier.combinedClickable(
+                    onClick = {},
+                    onLongClick = onAvatarLongClick
+                )
             )
 
             FlowRow(
@@ -134,7 +115,6 @@ fun AboutSection(
 
                 OutlinedButton(
                     onClick = {
-                        // Use mailto: URI so the system opens an email client
                         val mailUri = "mailto:mail@brittytino08@gmail.com".toUri()
                         val emailIntent = Intent(Intent.ACTION_SENDTO, mailUri).apply {
                             putExtra(Intent.EXTRA_SUBJECT, "Hello from Essentials")
@@ -178,123 +158,6 @@ fun AboutSection(
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(stringResource(R.string.action_telegram))
-                }
-
-                OutlinedButton(
-                    onClick = {
-                        val websiteUrl = "https://buymeacoffee.com/tinobritty"
-                        val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
-                        context.startActivity(intent)
-                    },
-                    modifier = Modifier.padding(horizontal = 4.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.rounded_heart_smile_24),
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.action_support))
-                }
-            }
-
-            Text(
-                text = stringResource(R.string.label_other_apps),
-                style = MaterialTheme.typography.titleMedium,
-                textAlign = TextAlign.Center
-            )
-
-            FlowRow(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center,
-                verticalArrangement = Arrangement.spacedBy(6.dp),
-                maxItemsInEachRow = 3
-            ) {
-
-                OutlinedButton(
-                    onClick = {
-                        val websiteUrl =
-                            "https://play.google.com/store/apps/details?id=com.brittytino.airsync&hl=en"
-                        val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
-                        context.startActivity(intent)
-                    },
-                    modifier = Modifier.padding(horizontal = 4.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.rounded_devices_24),
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.app_airsync))
-                }
-
-                OutlinedButton(
-                    onClick = {
-                        val websiteUrl = "https://brittytino08@gmail.com/zen"
-                        val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
-                        context.startActivity(intent)
-                    },
-                    modifier = Modifier.padding(horizontal = 4.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.rounded_web_24),
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.app_zenzero))
-                }
-
-                OutlinedButton(
-                    onClick = {
-                        val websiteUrl = "https://github.com/brittytino/canvas"
-                        val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
-                        context.startActivity(intent)
-                    },
-                    modifier = Modifier.padding(horizontal = 4.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.rounded_draw_24),
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.app_canvas))
-                }
-
-                OutlinedButton(
-                    onClick = {
-                        val websiteUrl = "https://github.com/brittytino/tasks"
-                        val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
-                        context.startActivity(intent)
-                    },
-                    modifier = Modifier.padding(horizontal = 4.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.rounded_task_alt_24),
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.app_tasks))
-                }
-
-                OutlinedButton(
-                    onClick = {
-                        val websiteUrl = "https://github.com/brittytino/Browser"
-                        val intent = Intent(Intent.ACTION_VIEW, websiteUrl.toUri())
-                        context.startActivity(intent)
-                    },
-                    modifier = Modifier.padding(horizontal = 4.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.outline_highlight_mouse_cursor_24),
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.app_zero))
                 }
             }
         }
